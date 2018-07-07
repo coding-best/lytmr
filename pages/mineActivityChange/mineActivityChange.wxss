@@ -1,0 +1,63 @@
+.container {
+  position: relative;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+}
+
+text {
+  font-size: 24rpx;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 128rpx;
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 10rpx;
+}
+
+.list_title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.list_title_img {
+  width: 64rpx;
+  height: 64rpx;
+  background-size: cover;
+  border-radius: 50%;
+  margin-left: 40rpx;
+  margin-right: 12rpx;
+}
+
+.list_title >text {
+  color: #333;
+}
+
+.list_name {
+  margin-left: 40rpx;
+}
+
+.list_name >text:first-child {
+  color: #666;
+}
+
+.list_name >text:last-child {
+  color: rgb(60, 152, 231);
+}
+
+.list_phone {
+  margin-left: 40rpx;
+}
+
+.list_phone >text:first-child {
+  color: #666;
+}
+
+.list_phone >text:last-child {
+  color: rgb(60, 152, 231);
+}

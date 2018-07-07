@@ -1,0 +1,43 @@
+<!-- 需求详情页 -->
+<view class="container">
+    <!-- 已关闭icon -->
+    <view class="close_icon" wx:if="{{close}}"></view>
+    
+    <!-- 顶部 -->
+    <view class="newsDetail_top">
+        <text class="newsDetail_top_title">深圳市深大巨成结构工程技术有限公司</text>
+        <view class="newsDetail_top_type">
+            <text>2017-11-24 17:20</text>
+        </view>
+    </view>
+    <!-- 内容 -->
+    <view class="newsDetail_content">
+        <view class="newsDetail_content_title">
+            <view class="newsDetail_content_icon"></view>
+            <text>需求详情</text>
+        </view>
+        <!-- 需求内容 -->
+        <view class="newsDetail_content_content">
+            <text>湛江坡头区17亩工业用地出租或者合作。(1) 17亩工业用地(工业 园区内),地面已平整,未硬底化；(2) 2700平方已建办公楼,中端装 修,搬入即可办公；(3) 2000平方已建厂房,水电等等配套设施已到 位,可做生产车间用。希望土地承租方式生产型企业,包括物流中转
+                等等;租期不少于5年；如果贵公司或贵项目属于好项目,我方也可 以免费或部分免费提供方办公、生产以入股方式合作。</text>
+        </view>
+        <image class="newsDetail_content_img" src="https://ofdznzfo9.qnssl.com/szdx_25791526890089_.pic_hd.jpg" mode="widthFix"></image>
+        <image class="newsDetail_content_img" src="https://ofdznzfo9.qnssl.com/szdx_25801526890091_.pic_hd.jpg" mode="widthFix"></image>
+        <image class="newsDetail_content_img" src="https://ofdznzfo9.qnssl.com/szdx_25851526890125_.pic_hd.jpg" mode="widthFix"></image>
+    </view>
+    <!-- 需求发起人 -->
+    <view class="newsDetail_content">
+        <view class="newsDetail_content_title">
+            <view class="newsDetail_content_icon"></view>
+            <text>需求发起人</text>
+        </view>
+        <view class="content_people" bindtap="hrefInfo">
+            <view class="content_info">
+                <view class="content_info_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_1999dd551295f8f8%21400x400_big.jpg')"></view>
+                <view class="content_info_name">梁零程</view>
+            </view>
+            <view class="content_right"></view>
+        </view>
+    </view>
+    <view style="height: 50rpx;"></view>
+</view>

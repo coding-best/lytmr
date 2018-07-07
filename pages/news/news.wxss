@@ -1,0 +1,154 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-box {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80rpx;
+  flex: none;
+  display: flex;
+  background: #fff;
+  border-bottom: 0.01px solid #e6e6e6;
+  z-index: 999;
+}
+
+.navbar .item {
+  width: 25%;
+  position: relative;
+  flex: auto;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 24rpx;
+  color: rgb(136, 136, 136);
+}
+
+.navbar .item.active {
+  color: rgb(60, 152, 231);
+  font-weight: 500;
+}
+
+.navbar .item.active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  margin-left: -12rpx;
+  height: 4rpx;
+  width: 24rpx;
+  background: rgb(60, 152, 231);
+  border-radius: 2px;
+}
+
+.currentTab {
+  position: relative;
+  top: 72rpx;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+}
+
+/* 新闻列表 */
+
+.news {
+  background: #fff;
+  height: auto;
+  padding: 7rpx 26rpx 10rpx 38rpx;
+  position: relative;
+  margin-bottom: 12rpx;
+}
+
+/* 每一条新闻 */
+
+.news .news_list {
+  height: 151rpx;
+  border-bottom: 0.1px solid #efefef;
+  margin-top: 32rpx;
+  position: relative;
+}
+
+.news .news_list_big {
+  height: 496rpx !important;
+}
+
+.news .news_list:last-child {
+  border-bottom: none;
+}
+
+/* 新闻列表左边图片 */
+
+.news .news_list .news_list_img {
+  height: 118rpx;
+  width: 180rpx;
+  float: left;
+  margin-right: 20rpx;
+  border-radius: 3px;
+  background-size: cover;
+  background-position: center center;
+}
+
+.news .news_list .news_list_img_big {
+  height: 364rpx;
+  width: 670rpx;
+  margin-right: 20rpx;
+  border-radius: 3px;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* 新闻列表右边内容 */
+
+.news .news_list .news_list_text {
+  width: 70%;
+  height: 120rpx;
+  float: left;
+  margin-top: -5rpx;
+}
+
+.news .news_list .news_list_text_big {
+  width: 100%;
+}
+
+/* 标题让她超出两行隐藏 */
+
+.news .news_list .news_list_text .news_list_text_title {
+  height: 64rpx;
+  font-size: 24rpx;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+  -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+  -webkit-line-clamp: 2; /** 显示的行数 **/
+  overflow: hidden; /** 隐藏超出的内容 **/
+}
+
+.news .news_list .news_list_text .news_list_text_bottom {
+  color: rgb(180, 180, 180);
+  font-size: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 26rpx;
+}
+
+.news_list_text_bottom > text:first-child {
+  color: rgb(60, 152, 231);
+  font-weight: 300;
+}
+
+.news_list_text_bottom > text:last-child {
+  margin-top: 2rpx;
+  color: rgb(180, 180, 180);
+}
+
+.news_list_text_bottom_big > text:last-child {
+  margin-right: 20rpx;
+}

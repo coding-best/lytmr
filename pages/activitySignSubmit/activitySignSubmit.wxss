@@ -1,0 +1,66 @@
+page {
+  background-color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content_img {
+  width: 210rpx;
+  height: 210rpx;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E5%9B%BE2@2x.png');
+  background-size: cover;
+  margin: 100rpx 0 60rpx 0;
+}
+
+.content>text {
+  font-size: 26rpx;
+  color: rgb(68, 68, 68);
+}
+
+.content_button {
+  width: 450rpx;
+  height: 72rpx;
+  border-radius: 50rpx;
+  background-color: rgb(60, 152, 231);
+  margin-top: 120rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content_button >text {
+  color: #fff;
+  font-size: 26rpx;
+  line-height: 72rpx;
+}
+
+.content_button2 {
+  width: 450rpx;
+  height: 72rpx;
+  border-radius: 50rpx;
+  border: 1rpx solid rgb(60, 152, 231);
+  margin-top: 48rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content_button2 >text {
+  color: rgb(60, 152, 231);
+  font-size: 26rpx;
+  line-height: 72rpx;
+}

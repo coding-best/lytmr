@@ -1,0 +1,24 @@
+<!-- 我的私信 -->
+<view class="container">
+  <!-- 有私信 -->
+  <view class="content" wx:if="{{mychat}}">
+    <view class="content_list" wx:for="{{ChatArr}}" wx:key="index" bindtap="hrefChat">
+      <view class="head" style="background-image: url({{item.img}})"></view>
+      <view class="content_text">
+        <view class="name">
+          <text>{{item.name}}</text>
+          <text>{{item.lastChat}}</text>
+        </view>
+        <view class="chat">
+          <text>{{item.chat}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 没有私信 -->
+  <view class="no" wx:if="{{!mychat}}">
+    <view class="no_icon"></view>
+    <text>暂无收到私信~</text>
+  </view>
+</view>

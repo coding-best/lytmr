@@ -1,0 +1,17 @@
+<!-- 修改招聘 -->
+<view class="container">
+  <view class="content">
+    <view class="content_list" bindtap="hrefRecruitPostOne" data-change="true">
+      <text>职位信息</text>
+      <view class="right"></view>
+    </view>
+    <view class="content_list" bindtap="hrefRecruitPostTwo" data-change="true">
+      <text>企业信息</text>
+      <view class="right"></view>
+    </view>
+    <view class="content_list" bindtap="hrefRecruitPostThree" data-change="true">
+      <text>职位联系人信息</text>
+      <view class="right"></view>
+    </view>
+  </view>
+</view>

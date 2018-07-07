@@ -1,0 +1,60 @@
+<!-- 隱私 -->
+<view class="container">
+    <view class="container_top" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_infoBg.jpg');">
+        <view class="top_img">
+            <view class="top_img_inside"></view>
+        </view>
+        <view class="top_text">
+            <text>傅禹乔</text>
+            <text>这家伙很懒，什么都没有留下</text>
+        </view>
+        <view class="top_more"></view>
+    </view>
+    <!-- 基本信息 -->
+    <view class="container_content container_content_first">
+        <view class="content_list content_list_title">
+            <view class="title_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AFicon.png')"></view>
+            <text>基本信息</text>
+            <text>*</text>
+        </view>
+        <view class="content_list content_list_privacy">
+            <text>当前用户以隐藏个人信息</text>
+        </view>
+    </view>
+    <!-- 院系资料 -->
+    <view class="container_content">
+        <view class="content_list content_list_title">
+            <view class="title_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E9%99%A2%E7%B3%BB%E8%B5%84%E6%96%99icon.png')"></view>
+            <text>院系资料</text>
+            <text>*</text>
+        </view>
+        <view class="content_list content_list_privacy">
+            <text>当前用户以隐藏个人信息</text>
+        </view>
+    </view>
+    <!-- 工作信息 -->
+    <view class="container_content">
+        <view class="content_list content_list_title">
+            <view class="title_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E5%B7%A5%E4%BD%9C%E4%BF%A1%E6%81%AFicon.png')"></view>
+            <text>工作信息</text>
+            <text>*</text>
+        </view>
+        <view class="content_list content_list_privacy">
+            <text>当前用户以隐藏个人信息</text>
+        </view>
+    </view>
+
+    <!-- 其他 -->
+    <view class="container_content">
+        <view class="content_list content_list_title">
+            <view class="title_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E5%85%B6%E4%BB%96icon.png')"></view>
+            <text>其他</text>
+            <text>*</text>
+        </view>
+        <view class="content_list content_list_privacy">
+            <text>当前用户以隐藏个人信息</text>
+        </view>
+    </view>
+
+    <view class="next" bindtap="hrefFillIn">发私信</view>
+</view>

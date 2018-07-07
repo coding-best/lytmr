@@ -1,0 +1,326 @@
+.container {
+  position: relative;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+}
+
+/* 在ip6下 1rpx=0.5px */
+
+text {
+  padding: 0;
+  margin: 0;
+}
+
+/* 中间导航栏  */
+
+.chooser {
+  display: flex;
+  justify-content: space-around;
+  border-radius: 4px;
+  background: #fff;
+  height: 194rpx;
+  margin: 20rpx 20rpx 0 20rpx;
+}
+
+/* 导航栏每一项 */
+
+.chooser .chooser-solo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 32rpx;
+}
+
+.chooser .chooser-solo .chooser-icon {
+  position: relative;
+  height: 96rpx;
+  width: 96rpx;
+  background-size: cover;
+}
+
+.chooser .chooser-solo .chooser-describe {
+  position: relative;
+  font-size: 22rpx;
+  white-space: nowrap;
+  margin: 14rpx auto;
+  color: rgb(102, 102, 102);
+}
+
+/*  新闻资讯  */
+
+.small-title {
+  display: flex;
+  justify-content: center;
+  height: 106rpx;
+  line-height: 106rpx;
+}
+
+.small-title .title-row {
+  color: #666;
+  font-weight: 100;
+  font-size: 20rpx;
+}
+
+.small-title .title-icon {
+  width: 26rpx;
+  height: 26rpx;
+  background-size: cover;
+  margin: auto 12rpx auto 26rpx;
+}
+
+.small-title .title-text {
+  font-size: 26rpx;
+  margin-right: 26rpx;
+  color: rgb(102, 102, 102);
+}
+
+.small-title .title-more {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  right: 0rpx;
+  font-size: 22rpx;
+  margin-right: 20rpx;
+  color: #b4b4b4;
+}
+
+.small-title .title-more > text {
+  color: #b4b4b4;
+}
+
+.title-more-right {
+  width: 20rpx;
+  height: 20rpx;
+  background-size: cover;
+}
+
+/* 校企招聘 */
+
+.recruit {
+  width: 100%;
+  height: auto;
+}
+
+.recruit-list {
+  height: 250rpx;
+  border-radius: 4px;
+  background: #fff;
+  margin: 0 20rpx 28rpx 20rpx;
+  padding: 7rpx 18rpx 10rpx 18rpx;
+  position: relative;
+}
+
+.recruit-list:last-child {
+  margin-bottom: 0;
+}
+
+.recruit-star {
+  position: absolute;
+  width: 40rpx;
+  height: 44rpx;
+  top: -10rpx;
+  left: 16rpx;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E4%BA%94%E6%98%9F%E8%A3%85%E9%A5%B0%E6%97%973.jpg');
+  background-size: cover;
+}
+
+.recruit-list-title {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40rpx;
+}
+
+.recruit-list-title > text:first-child {
+  font-size: 24rpx;
+  color: rgb(51, 51, 51);
+}
+
+.recruit-list-title > text:last-child {
+  font-size: 24rpx;
+  color: rgb(60, 152, 231);
+  font-weight: 400rpx;
+}
+
+.recruit-list-require {
+  display: flex;
+  margin-top: 10rpx;
+  padding-bottom: 26rpx;
+  border-bottom: 0.1rpx solid #efefef;
+}
+
+.recruit-list-require-logo {
+  width: 22rpx;
+  height: 22rpx;
+  /* background-image: url('https://ofdznzfo9.qnssl.com/szdx_require_time.png'); */
+  background-size: cover;
+  margin: 4rpx 6rpx 0 0;
+}
+
+.recruit-list-require > text {
+  font-size: 20rpx;
+  margin-right: 16rpx;
+  color: #666;
+}
+
+.recruit-list-require > text:last-child {
+  position: absolute;
+  right: 20rpx;
+  color: rgb(180, 180, 180);
+  margin-right: 0rpx;
+}
+
+.recruit-list-business {
+  display: flex;
+  width: 100%;
+  height: 53rpx;
+  margin-top: 25rpx;
+}
+
+.recruit-list-business-logo {
+  width: 32rpx;
+  height: 32rpx;
+  background-size: cover;
+  border-radius: 50%;
+  border: 0.1rpx solid #ccc;
+  padding: 10rpx;
+  margin-right: 14rpx;
+  margin-top: 4rpx;
+}
+
+.recruit-list-business-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.recruit-list-business-title > text:first-child {
+  font-size: 22rpx;
+  color: rgb(51, 51, 51);
+}
+
+.recruit-list-business-title > text:last-child {
+  font-size: 20rpx;
+  color: rgb(136, 136, 136);
+}
+
+/* 需求发布 */
+
+.activity {
+  border-radius: 4px;
+  background: #fff;
+  margin: 0 20rpx 20rpx 20rpx;
+  height: auto;
+  padding: 1rpx 18rpx 8rpx 18rpx;
+  position: relative;
+}
+
+.activity-content > .activity:last-child {
+  margin: 0 20rpx;
+}
+
+.activity_list {
+  height: auto;
+  border-radius: 3px;
+  padding: 20rpx 0;
+}
+
+.activity_list:first-child {
+  padding: 28rpx 0;
+}
+
+/*  需求发布  */
+
+.listBar {
+  width: 10rpx;
+  height: 10rpx;
+  float: left;
+  border-radius: 50%;
+  margin: 16rpx 10rpx 10rpx 0;
+}
+
+.activity_list .news_list_title {
+  width: 96%;
+  font-size: 24rpx;
+  float: left;
+  margin-top: 6rpx;
+  word-break: break-all;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; /** 隐藏超出的内容 **/
+}
+
+.activity_list .news_list_content {
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 23rpx 0 5rpx 0;
+}
+
+.activity_list .news_list_img {
+  width: 50rpx;
+  height: 50rpx;
+  float: left;
+  border-radius: 50%;
+  background-size: cover;
+  margin: 0 12rpx 0 20rpx;
+}
+
+.activity_list .news_list_name {
+  font-size: 24rpx;
+  color: rgb(102, 102, 102);
+  line-height: 50rpx;
+}
+
+.activity_list .news_list_date {
+  font-size: 20rpx;
+  color: rgb(180, 180, 180);
+  line-height: 50rpx;
+}
+
+/* 校友企业 */
+
+.business {
+  width: 100%;
+  height: auto;
+  float: none;
+}
+
+.business .business_card {
+  display: inline-block;
+  width: 345rpx;
+  height: 282rpx;
+  background-color: #fff;
+  border-radius: 3px;
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.business_card_img {
+  width: 100%;
+  height: 230rpx;
+  background-size: cover;
+  border-radius: 3px 3px 0 0;
+}
+
+.business_card_text {
+  width: 330rpx;
+  margin: 10rpx 0 0 10rpx;
+  font-size: 24rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.blank {
+  margin-top: 50rpx;
+}
+
+.blank-row {
+  margin-right: 30rpx;
+}
+
+.blank-text {
+  font-size: 20rpx !important;
+}

@@ -1,0 +1,24 @@
+<!-- 需求发布 -->
+<view class="container">
+  <view class="title">
+    <text>标题</text>
+    <input type="text" placeholder="建议20字以内可读性更高哦～" placeholder-class="placeholder" value="{{title}}" bindinput="titleInput" />
+  </view>
+  <view class="content">
+    <textarea placeholder="在此输入需求详情" placeholder-class="placeholder" value="{{describle}}" bindinput="textarea">
+      <view class="word">
+        <text style="color: rgb(60, 152, 231)">{{describleNum}}</text>
+        <text>/</text>
+        <text>140</text>
+      </view>
+    </textarea>
+
+    <view class="img">
+      <image class="img_single" src="{{item}}" mode="aspectFill" wx:for="{{imgUrl}}" wx:key="index" />
+      <view class="addImg" bindtap="chooseImg"></view>
+    </view>
+    <text>上传图片不能大于2M，最多只能上传8张图片（格式为JPG或PNG）</text>
+  </view>
+  <view class="next" bindtap="hrefSubmit" wx:if="{{!releaseChange}}">提交发布</view>
+  <view class="next" bindtap="hrefMineRelease" wx:if="{{releaseChange}}">保存修改</view>
+</view>

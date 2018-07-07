@@ -1,0 +1,49 @@
+<!-- 我发布的招聘 -->
+<view class="container">
+  <view class="recruit" wx:if="{{myrecruit}}">
+    <view class="recruit-list" wx:for="{{recruitArr}}" wx:key="index" bindtap="hrefRecruitDetail" data-close="true">
+      <view class="recruit-list-title">
+        <text>{{item.title}}</text>
+      </view>
+      <view class="recruit-list-title title-color">
+        <text wx:if="{{item.salary == '面议'}}">面议</text>
+        <text wx:elif="{{item.salary != '面议'}}"><text style="font-size: 20rpx;color: rgb(60, 152, 231)">¥</text>{{item.salary}}</text>
+      </view>
+      <view class="recruit-list-require">
+        <view class="recruit-list-require-logo" style="background-image: url({{requires[0].img}})"></view>
+        <text>{{item.workLife}}</text>
+        <view class="recruit-list-require-logo" style="background-image: url({{requires[1].img}})"></view>
+        <text>{{item.degree}}</text>
+        <view class="recruit-list-require-logo" style="background-image: url({{requires[2].img}})"></view>
+        <text>{{item.job}}</text>
+        <text>发布于：{{item.time}}</text>
+      </view>
+      <view class="right"></view>
+      <view class="recruit-list-button">
+        <view class="button" catchtap="hrefMineRecruitChange">修改招聘</view>
+        <view class="button" catchtap="closeRecruit">关闭招聘</view>
+      </view>
+    </view>
+  </view>
+
+  <view style="height: 20rpx"></view>
+
+    <!-- 没有招聘 -->
+  <view class="no" wx:if="{{!myrecruit}}">
+    <view class="no_icon"></view>
+    <text>暂无发布招聘~</text>
+  </view>
+
+  <!-- 关闭招聘确认 -->
+  <view class="alert" wx:if="{{layer}}" catchtouchmove='true'>
+    <view class="desc">
+      <text>关闭招聘后不可恢复，确定关闭？</text>
+    </view>
+    <view class="desc_button"  bindtap="clickCloseLayer">
+      <text>确定</text>
+    </view>
+  </view>
+
+    <!-- 遮罩 -->
+    <view class="layer" wx:if="{{layer}}" bindtap="clickCloseLayer" catchtouchmove='true'></view>
+</view>

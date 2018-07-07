@@ -1,0 +1,17 @@
+<!-- 报名管理 -->
+<view class="container">
+  <view class="list" wx:for="{{directoryArr}}" wx:key="index" bindtap="hrefInfo">
+    <view class="list_title">
+      <view class="list_title_img" style="background-image: url({{item.img}})"></view>
+      <text>{{item.name}}</text>
+    </view>
+    <view class="list_name">
+      <text>姓名：</text>
+      <text>{{item.name}}</text>
+    </view>
+    <view class="list_phone">
+      <text>手机：</text>
+      <text>{{item.num}}</text>
+    </view>
+  </view>
+</view>

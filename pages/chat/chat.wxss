@@ -1,0 +1,119 @@
+.container {
+  position: relative;
+  height: 100%;
+  /* -webkit-overflow-scrolling: touch; */
+  overflow-y: scroll;
+}
+
+.content {
+  height: 1100rpx;
+}
+
+/* 聊天列表 */
+
+.chat {
+  float: right;
+  clear: both;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 35rpx;
+}
+
+/* 好友给我发的信息 */
+
+.chat_reverse {
+  float: left;
+}
+
+.send {
+  position: relative;
+  top: 2rpx;
+  width: auto;
+  height: auto;
+  max-width: 500rpx;
+  background: #3c98e7;
+  border-radius: 16px;
+  /* 圆角 */
+  white-space: pre-wrap;
+  display: inline-block;
+}
+
+.send >text {
+  padding: 12rpx 30rpx 12rpx 30rpx;
+  display: inline-block;
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.send .arrow {
+  position: absolute;
+  top: 4px;
+  right: -24rpx;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  border-top: 8rpx solid;
+  border-left: 16rpx solid;
+  border-bottom: 6rpx solid;
+  border-right: 16rpx solid;
+  border-color: transparent transparent transparent #3c98e7;
+  transform: rotate(-28deg);
+}
+
+.head {
+  width: 64rpx;
+  height: 64rpx;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_1999dd551295f8f8%21400x400_big.jpg');
+  background-size: cover;
+  border-radius: 50%;
+  margin: 0 20rpx;
+}
+
+/* 好友给我发的信息 */
+
+.reverse {
+  transform: scaleX(-1);
+  background-color: #fff;
+  box-shadow: 0rpx 2rpx 5rpx 0rpx rgba(60, 152, 231, 0.2);
+}
+
+.reverse >text {
+  transform: scaleX(-1);
+  color: rgb(51, 51, 51);
+}
+
+.reverse .arrow {
+  border-color: transparent transparent transparent #fff;
+}
+
+.time {
+  float: left;
+  margin: 40rpx 0 0 282rpx;
+  font-size: 20rpx;
+  color: rgb(153, 153, 153);
+  clear: both;
+}
+/* 底部信息 */
+
+.message {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  height: 90rpx;
+  width: 100%;
+  background-color: #fff;
+  line-height: 90rpx;
+}
+
+.message input {
+  width: 710rpx;
+  margin: 0 20rpx;
+  font-size: 22rpx;
+  color: rgb(51, 51, 51);
+}
+
+.placeholder {
+  font-size: 22rpx;
+  color: rgb(153, 153, 153);
+}

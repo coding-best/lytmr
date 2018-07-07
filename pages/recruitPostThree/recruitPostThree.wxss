@@ -1,0 +1,94 @@
+.container {
+  position: relative;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+}
+
+input {
+  position: relative;
+  width: 512rpx;
+  right: 40rpx;
+  text-align: right;
+}
+
+textarea {
+  width: 670rpx;
+  letter-spacing: 20;
+}
+
+.placeholder {
+  color: #c7c7c7;
+  font-size: 24rpx;
+}
+
+/* 底下列表 */
+
+.content {
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.content_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90rpx;
+  border-bottom: 1rpx solid #efefef;
+  line-height: 90rpx;
+  font-size: 24rpx;
+  margin-left: 40rpx;
+}
+
+.content_list_intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: auto !important;
+}
+
+.content_list>text:first-child {
+  display: block;
+  width: 176rpx;
+  color: rgb(102, 102, 102);
+}
+
+.star {
+  color: rgb(255, 47, 49);
+  margin-left: 6rpx;
+}
+
+.content_list>text:last-child {
+  color: rgb(51, 51, 51);
+  margin-right: 40rpx;
+}
+
+.next {
+  width: 670rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 50rpx;
+  background-color: #3c98e7;
+  color: #fff;
+  margin: 40rpx;
+  font-size: 26rpx;
+}
+
+.upload_img {
+  margin-right: 40rpx;
+  width: 64rpx;
+  height: 64rpx;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_upload_img.png');
+  background-size: cover;
+}
+
+.right {
+  position: relative;
+  width: 18rpx;
+  height: 18rpx;
+  right: 40rpx;
+  background-size: contain;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_right2.png');
+}

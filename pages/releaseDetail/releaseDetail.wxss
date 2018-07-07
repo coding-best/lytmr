@@ -1,0 +1,116 @@
+.container {
+  position: relative;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+}
+
+.newsDetail_top {
+  height: 94rpx;
+  background-color: #fff;
+  padding: 30rpx 0 32rpx 41rpx;
+}
+
+.newsDetail_top>.newsDetail_top_title {
+  font-size: 26rpx;
+  font-weight: 500;
+  color: rgb(51, 51, 51);
+}
+
+.newsDetail_top>.newsDetail_top_type {
+  font-size: 20rpx;
+  margin-top: 16rpx;
+}
+
+.newsDetail_top>.newsDetail_top_type>text:last-child {
+  color: rgb(180, 180, 180);
+}
+
+/* 需求发起人 */
+
+.newsDetail_content {
+  width: 670rpx;
+  padding: 40rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.newsDetail_content_title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.newsDetail_content_title>text {
+  font-size: 24rpx;
+  margin-left: 10rpx;
+  font-weight: 500;
+}
+
+.newsDetail_content_icon {
+  width: 26rpx;
+  height: 26rpx;
+  background-size: cover;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_release_icon.png');
+}
+
+.newsDetail_content .newsDetail_content_img {
+  width: 670rpx;
+  border-radius: 3px;
+  margin-top: 32rpx;
+}
+
+.newsDetail_content .newsDetail_content_img:last-child {
+  margin-top: 40rpx;
+}
+
+.newsDetail_content .newsDetail_content_content>text {
+  font-size: 22rpx;
+  color: rgb(85, 85, 85);
+}
+
+.content_people {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content_info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.content_info_img {
+  width: 64rpx;
+  height: 64rpx;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.content_info_name {
+  font-size: 24rpx;
+  color: rgb(102, 102, 102);
+  margin-left: 12rpx;
+}
+
+.content_right {
+  width: 12rpx;
+  height: 22rpx;
+  background-size: cover;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_right3.png');
+}
+
+/* 已关闭 */
+
+.close_icon {
+  position: absolute;
+  top: 22rpx;
+  right: 40rpx;
+  width: 110rpx;
+  height: 110rpx;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_wd_%E5%B7%B2%E5%85%B3%E9%97%AD110%E5%83%8F%E7%B4%A0.png');
+  background-size: cover;
+  z-index: 999;
+}

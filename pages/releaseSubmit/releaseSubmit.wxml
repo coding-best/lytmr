@@ -1,0 +1,11 @@
+<!-- 提交审核 -->
+<view class="container">
+  <view class="content">
+    <view class="content_img"></view>
+    <text>您的需求已提交成功</text>
+    <text>发布的需求可在我的我发布的需求进行查看</text>
+  </view>
+  <view class="content_button" bindtap="hrefRelease">
+    <text>返回需求发布页</text>
+  </view>
+</view>

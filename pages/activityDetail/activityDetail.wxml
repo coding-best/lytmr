@@ -1,0 +1,111 @@
+<!-- 活动详情页 -->
+<view class="container">
+    <!-- 封面图片以及活动名称、地址等信息 -->
+    <view class="content">
+        <view class="content_img"></view>
+        <view class="content_info">
+            <view class="content_info_title">
+                <text>土木工程学院“校友沙龙”活动</text>
+            </view>
+            <view class="content_info_value">
+                <text><text class="money">¥</text>0</text>
+                <text>已报名<text style="color: rgb(60, 152, 231)">28</text>人／限50人报名</text>
+            </view>
+            <view class="content_info_end">
+                <text>报名截止时间：2018/08/07 17:50</text>
+            </view>
+            <view class="content_info_address">
+                <view class="icon"></view>
+                <text>深圳市南山区南海大道3688号深圳大学南区土木工程学院院馆</text>
+            </view>
+            <view class="content_info_time">
+                <view class="icon"></view>
+                <text>2018/08/08 14:30 至 2018/08/08 18:00</text>
+            </view>
+        </view>
+    </view>
+
+    <!-- 活动发起人 -->
+    <view class="author">
+        <view class="newsDetail_content">
+            <view class="newsDetail_content_title">
+                <view class="newsDetail_content_icon"></view>
+                <text>活动发起人</text>
+            </view>
+            <view class="content_people" bindtap="hrefInfo">
+                <view class="content_info_people">
+                    <view class="content_info_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_Head1.jpg')"></view>
+                    <view class="content_info_name">梁零程</view>
+                </view>
+                <view class="content_right"></view>
+            </view>
+        </view>
+    </view>
+
+    <!-- 已报名 -->
+    <view class="registered">
+        <view class="newsDetail_content">
+            <view class="newsDetail_content_title">
+                <view class="newsDetail_content_icon"></view>
+                <text>已报名</text>
+            </view>
+            <view class="content_portrait {{extend?'content_portrait_extend':''}}">
+                <view class="content_info_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_Head1.jpg')"></view>
+                <view class="content_info_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_Head2.jpg')"></view>
+                <view class="content_info_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_Head3.jpg')"></view>
+                <view class="content_info_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_Head4.jpg')"></view>
+                <view class="content_info_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_Head5.jpg')"></view>
+                <view class="content_info_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_Head6.jpg')"></view>
+                <view class="content_info_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_Head7.jpg')"></view>
+                <view class="content_info_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_Head8.jpg')"></view>
+                <view class="content_info_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_Head9.jpg')"></view>
+                <view class="content_info_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_Head10.jpg')"></view>
+                <view class="content_info_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_Head11.jpg')"></view>
+                <view class="content_info_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_Head12.jpg')"></view>
+                <view class="content_info_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_Head13.jpg')"></view>
+                <view class="content_info_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_Head14.jpg')"></view>
+                <view class="content_info_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_Head13.jpg')"></view>
+                <view class="content_info_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_Head14.jpg')"></view>
+                <view class="content_info_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_Head15.jpg')"></view>
+                <view class="content_info_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_Head.jpg')"></view>
+            </view>
+            <view class="more" bindtap="openExtend" wx:if="{{!extend}}">
+                <text>展开更多</text>
+                <view class="more_bottom"></view>
+            </view>
+            <view class="more" bindtap="closeExtend" wx:if="{{extend}}">
+                <view class="more_bottom_reserve"></view>
+                <text>收起</text>
+            </view>
+        </view>
+    </view>
+
+    <!-- 活动描述 -->
+    <view class="describe">
+        <view class="newsDetail_content">
+            <view class="newsDetail_content_title">
+                <view class="newsDetail_content_icon"></view>
+                <text>活动描述</text>
+            </view>
+            <!-- 需求内容 -->
+            <view class="newsDetail_content_content">
+                <text>在这春意浓浓，生机勃勃的时节，土木工程学院乘着深大母校30周年校庆的东风，于4月13日（上周六）下午在南区土木工程学院院馆成功举办了土木工程学院2013年第一场校友沙龙活动，为校庆30周年增添了色彩。此次活动精彩纷呈，意义深远。弘扬了深大精神文化，推动校园文明建设，增强师生爱校情怀，树立历史发展的标杆，营造校庆欢乐的气氛，让校友与在校师生都参与进我们的校庆活动中来。同时燃起了对未来梦想的追逐，重温以往校园的美好时光，感受深大三十年来的巨变，情牵校园与社会，梦系现在与未来。活动邀请了12名不同专业的优秀校友参加，与在校学生进行了零距离的接触与交谈。活动以访谈形式进行，新颖活泼，调动了校友与学子之间的激情与热忱。就关于专业选择，学习方法与特点，就业方向，大学生活等方面的问题展开了深层次、宽领域、零距离的交流与访谈。场内气氛活跃，掌声此起彼伏，每个人都抒发了自己的见解、想法以及疑惑的地方。校友在活动中感受到了后生的力量，以及母校蓬勃的发展与巨大的变化及飞跃；学子通过与师兄师姐们的交流，对自己的未来与前景有了重新全面的认识与掌控。</text>
+            </view>
+            <image class="newsDetail_content_img" src="https://ofdznzfo9.qnssl.com/szdx_25791526890089_.pic_hd.jpg" mode="widthFix"></image>
+            <image class="newsDetail_content_img" src="https://ofdznzfo9.qnssl.com/szdx_stuttgart-library-white-books-159870.jpeg" mode="widthFix"></image>
+        </view>
+    </view>
+
+    <!-- 底部立即报名 -->
+    <view class="bottom">
+        <view class="share">
+            <view class="share_icon"></view>
+            <text>分享</text>
+        </view>
+        <view class="share_button" bindtap="hrefActivitySignUp">
+            <text>立即报名</text>
+        </view>
+    </view>
+
+    <view style="height: 120rpx;"></view>
+</view>

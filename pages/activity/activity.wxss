@@ -1,0 +1,187 @@
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-box {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80rpx;
+    flex: none;
+    display: flex;
+    background: #fff;
+    border-bottom: 0.01px solid #e6e6e6;
+    z-index: 999;
+}
+
+.navbar .item {
+    width: 25%;
+    position: relative;
+    flex: auto;
+    text-align: center;
+    line-height: 80rpx;
+    font-size: 24rpx;
+    color: rgb(136, 136, 136);
+}
+
+.navbar .item.active {
+    color: rgb(60, 152, 231);
+    font-weight: 500;
+}
+
+.navbar .item.active:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    margin-left: -12rpx;
+    height: 4rpx;
+    width: 24rpx;
+    background: rgb(60, 152, 231);
+    border-radius: 2px;
+}
+
+.currentTab {
+    position: relative;
+    top: 80rpx;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+}
+
+
+/* 活动 */
+.news {
+  margin: 0 20rpx;
+  height: auto;
+  position: relative;
+}
+
+.active_list {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  padding-bottom: 32rpx;
+  padding: 32rpx 20rpx 26rpx 20rpx;
+  margin-top: 20rpx;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.active_icon {
+  position: absolute;
+  right: -2rpx;
+  top: -2rpx;
+  width: 73rpx;
+  height: 73rpx;
+  background-size: cover;
+}
+
+.active_icon_ongoing {
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E6%B4%BB%E5%8A%A8%E9%A1%B5%E5%8F%B3%E4%B8%8A%E8%A7%92icon.png');
+}
+
+.active_icon_ending {
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E6%B4%BB%E5%8A%A8%E9%A1%B5%E5%8F%B3%E4%B8%8A%E8%A7%92icon2.png');
+}
+
+.active_list_img {
+  height: 154rpx;
+  width: 214rpx;
+  background-size: cover;
+  margin-right: 20rpx;
+  border-radius: 3px;
+  background-position: center;
+}
+
+.active_list_content_title {
+  width: 432rpx;
+  font-size: 24rpx;
+  margin-top: -5rpx;
+  margin-bottom: 13rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.active_list_content_time, .active_list_content_address {
+  display: flex;
+  justify-content: flex-start;
+  line-height: 20rpx;
+  margin-bottom: 10rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.active_list_content_time_icon, .active_list_content_address_icon {
+  width: 18rpx;
+  height: 18rpx;
+  background-size: cover;
+  margin-right: 12rpx;
+}
+
+.active_list_content_time > text, .active_list_content_address > text {
+  width: 402rpx;
+  font-size: 20rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: rgb(153, 153, 153);
+}
+
+.active_list_content_other {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 26rpx;
+}
+
+.active_list_content_other_left > text:first-child {
+  font-size: 24rpx;
+  color: rgb(60, 152, 231);
+  margin-right: 14rpx;
+}
+
+.active_list_content_other_left > text:last-child {
+  font-size: 20rpx;
+  color: rgb(180, 180, 180);
+}
+
+.active_list_content_other_right {
+  display: flex;
+  align-items: center;
+}
+
+.active_list_content_other_right > text {
+  position: relative;
+  color: #3c98e7;
+  font-size: 24rpx;
+  border: 0.1rpx solid #3c98e7;
+  border-radius: 50rpx;
+  padding: 4rpx 20rpx;
+  bottom: 6rpx;
+}
+
+/* 发起活动icon */
+
+.activity_icon {
+  position: fixed;
+  left: 25rpx;
+  bottom: 150rpx;
+  width: 120rpx;
+  height: 120rpx;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E6%B4%BB%E5%8A%A8%E9%A1%B5icon.png');
+  background-size: cover;
+}
+
+/* 底部空白 */
+.blank_bottom {
+    height: 100rpx;
+}

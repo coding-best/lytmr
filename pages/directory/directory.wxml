@@ -1,0 +1,35 @@
+<!-- 校友录界面 -->
+<view class="container">
+  <!-- 搜索 -->
+  <view class="search">
+    <view class="search_arr" bindtap="hrefSelect">
+      <view class="search_icon"></view>
+      <input class="bc_text" placeholder="搜索姓名/工作单位关键词（全院校友)" placeholder-style="color: rgb(180, 180, 180)" value="{{searchValue}}" disabled="true"/>
+    </view>
+  </view>
+
+  <!-- 图片 -->
+  <view class="image"></view>
+
+  <!-- 通讯列表 -->
+  <view class="content">
+    <view class="content_top">
+      <view class="recruit-star"></view>
+      <text>11级土木工程学院校友通讯录</text>
+    </view>
+    <view class="content_list" wx:for="{{directoryArr}}" wx:key="key">
+      <view class="content_list_list" catchtap="{{confirm ? 'hrefInfo':'hrefConfirm'}}">
+        <view class="content_list_img" style="background-image: url({{item.img}})"></view>
+        <view class="content_list_info">
+          <text>{{item.name}}</text>
+          <text>{{item.num}}</text>
+        </view>
+        <view class="content_list_chat" catchtap="hrefChat"></view>
+      </view>
+    </view>
+  </view>
+  <view style="height: 20rpx"></view>
+</view>
+
+<!-- 遮罩 -->
+<view class="bg_layer"></view>

@@ -1,0 +1,76 @@
+.content {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+.content>text {
+  position: relative;
+  font-size: 20rpx;
+  color: rgb(153, 153, 153);
+  bottom: 10rpx;
+  left: 40rpx;
+}
+
+textarea { 
+    width: 670rpx;
+    height: 700rpx;
+    padding: 40rpx;
+    font-size: 24rpx;
+}
+
+.img {
+    height: auto;
+    position: relative;
+    left: 40rpx;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.img_single {
+    position: relative;
+    width: 160rpx;
+    height: 160rpx;
+    margin-right: 10rpx;
+    margin-bottom: 10rpx;
+    border-radius: 8rpx;
+}
+
+.addImg {
+    width: 160rpx;
+    height: 160rpx;
+    background-size: cover;
+    background-image: url('https://ofdznzfo9.qnssl.com/szdx_addImg.png');
+    bottom: -100rpx;
+    margin-right: 12rpx;
+    margin-bottom: 10rpx;
+}
+
+.next {
+    width: 670rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    border-radius: 50rpx;
+    background-color: #3c98e7;
+    color: #fff;
+    margin: 40rpx;
+    font-size: 26rpx;
+}
+
+/* 字数统计 */
+
+.word {
+    display: flex;
+    position: absolute;
+    right: 40rpx;
+    bottom: 26rpx;
+}
+
+.word>text {
+    font-size: 24rpx;
+    color: rgb(204, 204, 204);
+}

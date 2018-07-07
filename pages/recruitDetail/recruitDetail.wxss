@@ -1,0 +1,240 @@
+.container {
+  position: relative;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.list_content {
+  padding-top: 50rpx;
+  margin: 0 40rpx;
+}
+
+/* 校企招聘 */
+
+.recruit {
+  width: 100%;
+  height: auto;
+  margin-top: 36rpx;
+}
+
+.recruit-list {
+  height: 220rpx;
+  border-radius: 4px;
+  background: #fff;
+  padding: 7rpx 38rpx 10rpx 38rpx;
+  position: relative;
+}
+
+.recruit-list:last-child {
+  margin-bottom: 0;
+}
+
+.recruit-star {
+  position: absolute;
+  width: 40rpx;
+  height: 44rpx;
+  top: -10rpx;
+  left: 16rpx;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E8%A3%85%E9%A5%B0%E5%B0%8F%E6%97%97%E5%AD%90z.png');
+  background-size: cover;
+}
+
+.recruit-list-title {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 27rpx;
+}
+
+.recruit-list-title>text:first-child {
+  font-size: 24rpx;
+  color: rgb(51, 51, 51);
+}
+
+.recruit-list-title>text:last-child {
+  font-size: 24rpx;
+  color: rgb(60, 152, 231);
+  font-weight: 400rpx;
+}
+
+.recruit-list-require {
+  display: flex;
+  width: 750rpx;
+  margin-top: 10rpx;
+  padding-bottom: 26rpx;
+  border-bottom: 0.1rpx solid #efefef;
+}
+
+.recruit-list-require-logo {
+  width: 22rpx;
+  height: 22rpx;
+  /* background-image: url('https://ofdznzfo9.qnssl.com/szdx_require_time.png'); */
+  background-size: cover;
+  margin: 4rpx 6rpx 0 0;
+}
+
+.recruit-list-require>text {
+  font-size: 20rpx;
+  margin-right: 16rpx;
+  color: #666;
+}
+
+.recruit-list-require>text:last-child {
+  position: absolute;
+  right: 38rpx;
+  color: rgb(180, 180, 180);
+  margin-right: 0rpx;
+}
+
+.recruit-list-business {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 53rpx;
+  margin-top: 20rpx;
+}
+
+.recruit-list-business-logo {
+  width: 32rpx;
+  height: 32rpx;
+  background-size: cover;
+  border-radius: 50%;
+  border: 0.1rpx solid #ccc;
+  padding: 10rpx;
+  margin-right: 14rpx;
+  margin-top: 4rpx;
+}
+
+.recruit-list-business-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.recruit-list-business-title>text {
+  font-size: 24rpx;
+  color: #333;
+}
+
+.recruit-list-business-title>text:last-child {
+  font-size: 20rpx;
+  color: rgb(136, 136, 136);
+}
+
+.recruit-list-business .right {
+  position: relative;
+  left: 260rpx;
+  width: 18rpx;
+  height: 18rpx;
+  background-size: contain;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_WechatIMG5002.png');
+}
+
+/* 企业信息 */
+
+.business_info {
+  position: relative;
+  width: 100%;
+  height: 140rpx;
+  background-color: #fff;
+  margin-top: 56rpx;
+}
+
+.recruit_title {
+  position: absolute;
+  width: 186rpx;
+  height: 44rpx;
+  top: -20rpx;
+  background-color: #3c98e7;
+  border-radius: 0 50rpx 50rpx 0;
+  color: #fff;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 44rpx;
+}
+
+.business_info .right {
+  left: 234rpx !important;
+}
+
+/* 职位描述 */
+
+.describe {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  margin-top: 56rpx;
+  padding-bottom: 22rpx;
+}
+
+.describe .list_content > text {
+  font-size: 22rpx;
+  color: rgb(68, 68, 68);
+}
+
+.describe .list_content {
+  padding-top: 40rpx;
+}
+
+/* 职位联系人 */
+
+.contact {
+  position: relative;
+  width: 100%;
+  height: 150rpx;
+  background-color: #fff;
+  margin-top: 56rpx;
+}
+
+.contact_list {
+  display: flex;
+}
+
+.contact_list >text {
+  font-size: 24rpx;
+  margin-left: 10rpx;
+}
+
+/* 职位发布者 */
+
+.author {
+  position: relative;
+  width: 100%;
+  height: 148rpx;
+  background-color: #fff;
+  margin-top: 56rpx;
+}
+
+.author .recruit-list-business {
+  margin-top: 0;
+}
+
+.author .author_name {
+  font-size: 24rpx;
+}
+
+.author .recruit-list-business {
+  display: flex;
+  align-items: center;
+}
+
+.author .right {
+  position: relative;
+  left: 514rpx;
+  height: 18rpx;
+  background-size: cover;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_WechatIMG5002.png');
+}
+
+/* 已关闭 */
+
+.close_icon {
+  position: absolute;
+  top: 14rpx;
+  right: 40rpx;
+  width: 110rpx;
+  height: 110rpx;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_wd_%E5%B7%B2%E5%85%B3%E9%97%AD110%E5%83%8F%E7%B4%A0.png');
+  background-size: cover;
+  z-index: 999;
+}

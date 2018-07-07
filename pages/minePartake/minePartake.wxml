@@ -1,0 +1,26 @@
+<!-- 我参与的活动 -->
+<view class="container">
+  <view class="content"  wx:if="{{myActivity}}">
+    <view class="content_list" wx:for="{{activeArr}}" wx:key="index" catchtap="hrefActivityDetail">
+      <view class="name">
+        <text>{{item.title}}</text>
+        <view class="right"></view>
+      </view>
+      <view class="date">
+        <text>活动时间：{{item.stopTime}} 至 {{item.stopTime}}</text>
+      </view>
+      <view class="signup">
+        <text><text class="money">¥</text>0</text>
+        <text>已报名</text>
+      </view>
+    </view>
+  </view>
+
+  <view style="height: 20rpx"></view>
+
+  <!-- 没有参加活动 -->
+  <view class="no" wx:if="{{!myActivity}}">
+    <view class="no_icon"></view>
+    <text>暂无发布需求~</text>
+  </view>
+</view>

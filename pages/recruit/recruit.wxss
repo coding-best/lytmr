@@ -1,0 +1,184 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-box {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100rpx;
+  flex: none;
+  display: flex;
+  background: #fff;
+  border-bottom: 0.01px solid #e6e6e6;
+  z-index: 999;
+}
+
+.navbar .item {
+  width: 25%;
+  position: relative;
+  flex: auto;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 28rpx;
+  color: rgb(136, 136, 136);
+}
+
+.navbar .item.active {
+  color: rgb(60, 152, 231);
+  font-weight: 500;
+}
+
+.navbar .item.active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  margin-left: -28rpx;
+  height: 4rpx;
+  width: 56rpx;
+  background: rgb(60, 152, 231);
+  border-radius: 2px;
+}
+
+.currentTab {
+  position: relative;
+  top: 72rpx;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+}
+
+/* 校企招聘 */
+
+.recruit {
+  width: 100%;
+  height: auto;
+  margin-top: 56rpx;
+}
+
+.recruit-list {
+  height: 250rpx;
+  border-radius: 4px;
+  background: #fff;
+  margin: 0 20rpx 36rpx 20rpx;
+  padding: 7rpx 18rpx 10rpx 18rpx;
+  position: relative;
+}
+
+.recruit-list:last-child {
+  margin-bottom: 0;
+}
+
+.recruit-star {
+  position: absolute;
+  width: 40rpx;
+  height: 44rpx;
+  top: -10rpx;
+  left: 16rpx;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E4%BA%94%E6%98%9F%E8%A3%85%E9%A5%B0%E6%97%973.jpg');
+  background-size: cover;
+}
+
+.recruit-list-title {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40rpx;
+}
+
+.recruit-list-title>text:first-child {
+  font-size: 24rpx;
+  color: rgb(51, 51, 51);
+}
+
+.recruit-list-title>text:last-child {
+  font-size: 24rpx;
+  color: rgb(60, 152, 231);
+  font-weight: 400rpx;
+}
+
+.recruit-list-require {
+  display: flex;
+  margin-top: 10rpx;
+  padding-bottom: 26rpx;
+  border-bottom: 0.1rpx solid #efefef;
+}
+
+.recruit-list-require-logo {
+  width: 22rpx;
+  height: 22rpx;
+  /* background-image: url('https://ofdznzfo9.qnssl.com/szdx_require_time.png'); */
+  background-size: cover;
+  margin: 4rpx 6rpx 0 0;
+}
+
+.recruit-list-require>text {
+  font-size: 20rpx;
+  margin-right: 16rpx;
+  color: #666;
+}
+
+.recruit-list-require>text:last-child {
+  position: absolute;
+  right: 20rpx;
+  color: rgb(180, 180, 180);
+  margin-right: 0rpx;
+}
+
+.recruit-list-business {
+  display: flex;
+  width: 100%;
+  height: 53rpx;
+  margin-top: 25rpx;
+}
+
+.recruit-list-business-logo {
+  width: 32rpx;
+  height: 32rpx;
+  background-size: cover;
+  border-radius: 50%;
+  border: 0.1rpx solid #ccc;
+  padding: 10rpx;
+  margin-right: 14rpx;
+  margin-top: 4rpx;
+}
+
+.recruit-list-business-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.recruit-list-business-title>text:first-child {
+  font-size: 22rpx;
+  color: rgb(51, 51, 51);
+}
+
+.recruit-list-business-title>text:last-child {
+  font-size: 20rpx;
+  color: rgb(136, 136, 136);
+}
+
+/* 需求招聘icon */
+
+.recruit_icon {
+  position: fixed;
+  right: 25rpx;
+  bottom: 150rpx;
+  width: 128rpx;
+  height: 128rpx;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E5%8F%91%E5%B8%83%E6%8B%9B%E8%81%98icon1.png');
+  background-size: cover;
+}
+
+/* 底部空白 */
+
+.blank_bottom {
+  height: 100rpx;
+}

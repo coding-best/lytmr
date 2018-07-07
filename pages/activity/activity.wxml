@@ -1,0 +1,113 @@
+<!-- 活动页 -->
+<view class="container">
+  <!-- 顶部选项卡 -->
+  <view class="navbar">
+    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+  </view>
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange">
+    <!--  全部  -->
+    <swiper-item class="currentTab">
+      <view class="news activity">
+        <view class="active_list" wx:for="{{activeArr}}" wx:key="key" bindtap="hrefActivityDetail">
+          <view class="active_icon {{item.state == 0? 'active_icon_ending':'active_icon_ongoing'}}"></view>
+          <view class="active_list_img" style="background-image: url({{item.img}})"></view>
+          <view class="active_list_content">
+            <view class="active_list_content_title">
+              <text>{{item.title}}</text>
+            </view>
+            <view class="active_list_content_time">
+              <view class="active_list_content_time_icon" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_time.png')"></view>
+              <text>{{item.stopTime}}</text>
+            </view>
+            <view class="active_list_content_address">
+              <view class="active_list_content_address_icon" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_address.png')"></view>
+              <text>{{item.address}}</text>
+            </view>
+            <view class="active_list_content_other">
+              <view class="active_list_content_other_left">
+                <text>{{item.cost == 0 ? '免费':'¥'+item.cost}}</text>
+                <text>已有{{item.signUpNum}}人报名</text>
+              </view>
+              <view class="active_list_content_other_right" catchtap="hrefActivitySignUp">
+                <text>我要报名</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="blank_bottom"></view>
+    </swiper-item>
+
+    <!-- 进行中 -->
+    <swiper-item class="currentTab">
+      <view class="news activity">
+        <view class="active_list" wx:for="{{activeArr}}" wx:key="key" wx:if="{{item.state == 1}}" bindtap="hrefActivityDetail">
+          <view class="active_icon {{item.state == 0? 'active_icon_ending':'active_icon_ongoing'}}"></view>
+          <view class="active_list_img" style="background-image: url({{item.img}})"></view>
+          <view class="active_list_content">
+            <view class="active_list_content_title">
+              <text>{{item.title}}</text>
+            </view>
+            <view class="active_list_content_time">
+              <view class="active_list_content_time_icon" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_time.png')"></view>
+              <text>{{item.stopTime}}</text>
+            </view>
+            <view class="active_list_content_address">
+              <view class="active_list_content_address_icon" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_address.png')"></view>
+              <text>{{item.address}}</text>
+            </view>
+            <view class="active_list_content_other">
+              <view class="active_list_content_other_left">
+                <text>{{item.cost == 0 ? '免费':'¥'+item.cost}}</text>
+                <text>已有{{item.signUpNum}}人报名</text>
+              </view>
+              <view class="active_list_content_other_right">
+                <text>我要报名</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="blank_bottom"></view>
+    </swiper-item>
+
+    <!-- 已结束 -->
+    <swiper-item class="currentTab">
+      <view class="news activity">
+        <view class="active_list" wx:for="{{activeArr}}" wx:key="key" wx:if="{{item.state == 0}}" bindtap="hrefActivityDetail">
+          <view class="active_icon {{item.state == 0? 'active_icon_ending':'active_icon_ongoing'}}"></view>
+          <view class="active_list_img" style="background-image: url({{item.img}})"></view>
+          <view class="active_list_content">
+            <view class="active_list_content_title">
+              <text>{{item.title}}</text>
+            </view>
+            <view class="active_list_content_time">
+              <view class="active_list_content_time_icon" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_time.png')"></view>
+              <text>{{item.stopTime}}</text>
+            </view>
+            <view class="active_list_content_address">
+              <view class="active_list_content_address_icon" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_address.png')"></view>
+              <text>{{item.address}}</text>
+            </view>
+            <view class="active_list_content_other">
+              <view class="active_list_content_other_left">
+                <text>{{item.cost == 0 ? '免费':'¥'+item.cost}}</text>
+                <text>已有{{item.signUpNum}}人报名</text>
+              </view>
+              <view class="active_list_content_other_right">
+                <text>我要报名</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="blank_bottom"></view>
+    </swiper-item>
+
+  </swiper>
+  <!-- 发布招聘icon -->
+  <view class="activity_icon" bindtap="hrefActivityPost"></view>
+</view>
+
+<!-- 遮罩 -->
+<view class="bg_layer"></view>

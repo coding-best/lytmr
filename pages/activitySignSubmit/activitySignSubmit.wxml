@@ -1,0 +1,13 @@
+<!-- 活动报名完成页 -->
+<view class="container">
+  <view class="content">
+    <view class="content_img"></view>
+    <text>恭喜您报名成功</text>
+  </view>
+  <view class="content_button">
+    <text>查看我报名的活动</text>
+  </view>
+  <view class="content_button2" bindtap="hrefActivityDetail">
+    <text>返回活动详情</text>
+  </view>
+</view>

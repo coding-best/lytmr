@@ -1,0 +1,44 @@
+<!-- 活动报名页 -->
+<view class="container">
+  <view class="active_list">
+    <view class="active_list_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_14761526377936_.pic_hd.jpg')"></view>
+    <view class="active_list_content">
+      <view class="active_list_content_title">
+        <text>土木工程学院”校友沙龙”活动</text>
+      </view>
+      <view class="active_list_content_time">
+        <view class="active_list_content_time_icon" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_time.png')"></view>
+        <text>2018/06/12 9:30-2018/06/12 11:30</text>
+      </view>
+      <view class="active_list_content_address">
+        <view class="active_list_content_address_icon" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_address.png')"></view>
+        <text>深圳市南山区南海大道3688号深圳大学学术...</text>
+      </view>
+      <view class="active_list_content_other">
+        <view class="active_list_content_other_left">
+          <text>¥</text><text>0</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="active_list_content_ps">
+    <view class="active_list_content_ps_icon" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E6%84%9F%E5%8F%B9%E5%8F%B7icon@2x.png')"></view>
+    <text>活动费用为0的均为免费，如有需要支付费用的活动仅支持线下支付。</text>
+  </view>
+
+  <view class="content">
+    <view class="content_list">
+      <view class="icon"></view>
+      <text>报名表单填写</text>
+    </view>
+    <view class="content_list">
+      <text>姓名<text class="star">*</text></text>
+      <input type="text" placeholder="" placeholder-class="placeholder" />
+    </view>
+    <view class="content_list">
+      <text>手机<text class="star">*</text></text>
+      <input type="text" placeholder="" placeholder-class="placeholder" />
+    </view>
+  </view>
+  <view class="next" bindtap="hrefActivitySignSubmit">提交报名</view>
+</view>

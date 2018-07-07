@@ -1,0 +1,25 @@
+<!-- 新闻详情页 -->
+<view class="container">
+  <!-- 顶部 -->
+  <view class="newsDetail_top">
+    <text class="newsDetail_top_title">深圳市深大巨成结构工程技术有限公司</text>
+    <view class="newsDetail_top_type">
+      <text>#校友新闻</text>
+      <text>2017-11-24</text>
+    </view>
+  </view>
+  <!-- 内容 -->
+  <view class="newsDetail_content">
+    <view class="newsDetail_content_img"></view>
+    <view class="newsDetail_content_desc">
+      <text>深大巨成结构工程技术有限公司</text>
+    </view>
+    <view class="newsDetail_content_content">
+      <text>11月23日，88级校友、校友会副会长王耀禧与校友会秘书处副秘书长罗苑玲等,一行参访了 11级校友范伟的公司——深圳市深大巨成结构工程技术有限公司,开展校企帮扶工作。\n\n</text>
+      <text>交流的过程中，范伟校友展示了他所做过的成绩，他成功完成了惠州港荃湾港区通用码头3#泊位结构检测等多个项目。他表示巨成公司的经营范围是工程检测与鉴定技术咨询，而公司的业务拓展来源主要依托自己在行业中的精细化程度,目前仍处于“原始积累”的阶段。因此，范伟校友坦言,如何拓宽项目来源是公司亟待解决的问题。\n\n</text>
+      <text>王耀禧校友说 , 巨成公司现在正处于最艰难的时期, 他接下来也会继续与巨成对接，为巨成这个初创企业提供项目来源和技术支持等帮助\n\n</text>
+      <text>据了解，深圳市深大巨成结构工程技术有限公司  致力于打造专业的结构检测与耐久性研究与修复团队，将检测技术的专业能力、工程后期的\n\n</text>
+      <text>企业发展的初级阶段主要从事在建和已有建筑的主体结构的检测鉴定工作，从更专业的视角为各使用单位提供全方位的结构检测与后期的监测维\n\n</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,90 @@
+<!-- 我的 -->
+<view class="container">
+  <!-- 用户登陆后的状态 -->
+  <view class="container_top" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_infoBg.jpg');" wx:if="{{userInfo}}">
+    <view class="top_img" bindtap="hrefMineCompile" data-img="{{userInfo.avatarUrl}}">
+      <view class="top_img_inside" style="background-image: url({{userInfo.avatarUrl}})"></view>
+    </view>
+    <view class="top_text">
+      <text>{{userInfo.nickName}}</text>
+      <text>这家伙很懒，什么都没有留下</text>
+    </view>
+    <view class="top_edit" bindtap="hrefMineCompile"></view>
+  </view>
+
+  <!-- 用户登陆前的状态 -->
+  <view class="container_top" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_infoBg.jpg');" wx:if="{{!userInfo}}">
+    <view class="top_img" bindtap="hrefMineCompile">
+      <view class="top_img_inside" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E6%9C%AA%E7%99%BB%E5%BD%95-%281%29.png')"></view>
+    </view>
+    <view class="top_edit" bindtap="hrefMineCompile"></view>
+    <!-- 需要使用 button 来授权登录 -->
+    <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" hover-class="none">您还没有登录／点击登陆</button>
+    <view wx:else>请升级微信版本</view>
+  </view>
+
+  <!-- 第一栏 -->
+  <view class="container_content container_content_first">
+    <view class="content_list content_list_title" bindtap="hrefMineInfo">
+      <view class="title_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_wd_%E6%88%91%E7%9A%84%E6%A0%A1%E5%8F%8B%E9%AA%8C%E8%AF%81.png')"></view>
+      <text>校友认证</text>
+      <view class="content_state">
+        <view class="content_state_icon" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_wd_%E5%B7%B2%E9%AA%8C%E8%AF%81icon.png')"></view>
+        <text>已认证</text>
+        <view class="right_first"></view>
+      </view>
+    </view>
+    <view class="content_list content_list_title" bindtap="hrefMineChat">
+      <view class="title_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_wd_%E6%88%91%E7%9A%84%E7%A7%81%E4%BF%A1.png')"></view>
+      <text>我的私信</text>
+      <view class="right"></view>
+    </view>
+  </view>
+
+  <!-- 第二栏 -->
+  <view class="container_content">
+    <view class="content_list content_list_title" bindtap="hrefMineRecruit">
+      <view class="title_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_wd_%E6%88%91%E5%8F%91%E5%B8%83%E7%9A%84%E6%8B%9B%E8%81%98.png')"></view>
+      <text>我发布的招聘</text>
+      <view class="right right_mid"></view>
+    </view>
+    <view class="content_list content_list_title" bindtap="hrefMineRelease">
+      <view class="title_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_wd_%E6%88%91%E5%8F%91%E5%B8%83%E7%9A%84%E9%9C%80%E6%B1%82.png')"></view>
+      <text>我发布的需求</text>
+      <view class="right right_mid"></view>
+    </view>
+    <view class="content_list content_list_title" bindtap="hrefMineActivity">
+      <view class="title_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_wd_%E6%88%91%E5%8F%91%E8%B5%B7%E7%9A%84%E6%B4%BB%E5%8A%A8.png')"></view>
+      <text>我发起的活动</text>
+      <view class="right right_mid"></view>
+    </view>
+    <view class="content_list content_list_title" bindtap="hrefMinePartake">
+      <view class="title_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_wd_%E6%88%91%E6%8A%A5%E5%90%8D%E7%9A%84%E6%B4%BB%E5%8A%A8.png')"></view>
+      <text>我报名的活动</text>
+      <view class="right right_mid"></view>
+    </view>
+  </view>
+
+  <!-- 第三栏 -->
+  <view class="container_content">
+    <view class="content_list content_list_title" bindtap="hrefMineDonate">
+      <view class="title_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_wd_%E6%8D%90%E6%AC%BE%E8%AE%B0%E5%BD%95.png')"></view>
+      <text>捐赠记录</text>
+      <view class="right"></view>
+    </view>
+  </view>
+
+  <!-- 第四栏 -->
+  <view class="container_content">
+    <view class="content_list content_list_title" bindtap="hrefMineContact">
+      <view class="title_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_wd_%E8%81%94%E7%B3%BB%E6%88%91%E4%BB%AC.png')"></view>
+      <text>联系我们</text>
+      <view class="right"></view>
+    </view>
+  </view>
+  <view class="blank_bottom"></view>
+</view>
+
+<!-- 遮罩 -->
+<view class="bg_layer"></view>
+<view class="bg_layer2"></view>

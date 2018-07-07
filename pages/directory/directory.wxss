@@ -1,0 +1,131 @@
+.container {
+  position: relative;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+}
+
+.search {
+  margin: 20rpx;
+  width: 710rpx;
+  height: 70rpx;
+  background-color: #fff;
+  border-radius: 8rpx;
+}
+
+.search_arr {
+  display: flex;
+  height: 100%;
+}
+
+.search_icon {
+  width: 24rpx;
+  height: 22rpx;
+  background-size: cover;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_WechatIMG4126.png');
+  margin: 24rpx 17rpx 24rpx 24rpx;
+}
+
+.search_arr input {
+  height: 70rpx;
+  width: 100%;
+  border-radius: 5px;
+  line-height: 70rpx;
+  font-size: 24rpx;
+  font-weight: 300;
+  color: rgb(180, 180, 180);
+}
+
+/* 图片 */
+
+.image {
+  width: 710rpx;
+  height: 384rpx;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_19781526554104_.pic_hd.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 8rpx;
+  margin: 10rpx 20rpx 24rpx 20rpx;
+}
+
+/* 列表 */
+
+.content {
+  padding: 0 20rpx;
+}
+
+.content_top {
+  width: 710rpx;
+  height: 124rpx;
+  background-color: #fff;
+  border-radius: 10rpx 10rpx 0 0;
+  margin-bottom: 8rpx;
+}
+
+.content_top > text {
+  font-size: 26rpx;
+  color: rgb(51, 51, 51);
+  margin-left: 20rpx;
+  line-height: 66rpx;
+}
+
+.recruit-star {
+  position: relative;
+  width: 40rpx;
+  height: 46rpx;
+  top: -10rpx;
+  left: 20rpx;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E4%B8%89%E6%A8%AA%E8%A3%85%E9%A5%B0%E6%97%97.png');
+  background-size: cover;
+}
+
+.content_list {
+  height: 128rpx;
+  background-color: #fff;
+  padding: 0 20rpx;
+}
+
+.content_list_list {
+  width: 690rpx;
+  display: flex;
+  align-items: center;
+  padding: 28rpx 0;
+  border-bottom: 1rpx solid #efefef;
+}
+
+.content_list:last-child>view {
+  border-bottom: none;
+}
+
+.content_list_img {
+  width: 64rpx;
+  height: 64rpx;
+  float: left;
+  border-radius: 50%;
+  background-size: cover;
+  margin-right: 12rpx;
+}
+
+.content_list_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.content_list_info >text:first-child {
+  font-size: 24rpx;
+  color: rgb(60, 152, 231);
+}
+
+.content_list_info >text:last-child {
+  font-size: 22rpx;
+  color: rgb(102, 102, 102);
+}
+
+.content_list_chat {
+  position: relative;
+  left: 420rpx;
+  width: 40rpx;
+  height: 40rpx;
+  background-size: cover;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_szdx_chat.png');
+}

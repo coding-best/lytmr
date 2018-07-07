@@ -1,0 +1,140 @@
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-box {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80rpx;
+    flex: none;
+    display: flex;
+    background: #fff;
+    border-bottom: 0.01px solid #e6e6e6;
+    z-index: 999;
+}
+
+.navbar .item {
+    width: 25%;
+    position: relative;
+    flex: auto;
+    text-align: center;
+    line-height: 80rpx;
+    font-size: 24rpx;
+    color: rgb(136, 136, 136);
+}
+
+.navbar .item.active {
+    color: rgb(60, 152, 231);
+    font-weight: 500;
+}
+
+.navbar .item.active:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    margin-left: -12rpx;
+    height: 4rpx;
+    width: 24rpx;
+    background: rgb(60, 152, 231);
+    border-radius: 2px;
+}
+
+.currentTab {
+    position: relative;
+    top: 80rpx;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+}
+
+/* 需求发布 */
+
+.activity {
+    border-radius: 4px;
+    margin: 0 20rpx;
+    height: auto;
+    position: relative;
+}
+
+.activity_list {
+    height: auto;
+    border-radius: 3px;
+    padding: 20rpx 20rpx 27rpx 20rpx;
+    background: #fff;
+    margin-top: 20rpx;
+}
+
+.activity_list:last-child {
+    border-bottom: none;
+}
+
+/*  需求发布  */
+
+.listBar {
+    width: 10rpx;
+    height: 10rpx;
+    float: left;
+    border-radius: 50%;
+    margin: 16rpx 10rpx 10rpx 0;
+}
+
+.activity_list .news_list_title {
+    width: 96%;
+    font-size: 24rpx;
+    float: left;
+    margin-top: 6rpx;
+    word-break: break-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /** 隐藏超出的内容 **/
+}
+
+.activity_list .news_list_content {
+    width: 100%;
+    height: 50rpx;
+    display: flex;
+    justify-content: space-between;
+    padding: 23rpx 0 5rpx 0;
+}
+
+.activity_list .news_list_img {
+    width: 50rpx;
+    height: 50rpx;
+    float: left;
+    border-radius: 50%;
+    background-size: cover;
+    margin: 0 12rpx 0 20rpx;
+}
+
+.activity_list .news_list_name {
+    font-size: 24rpx;
+    color: rgb(102, 102, 102);
+    line-height: 50rpx;
+}
+
+.activity_list .news_list_date {
+    font-size: 20rpx;
+    color: rgb(180, 180, 180);
+    line-height: 50rpx;
+}
+
+/* 需求发布按钮 */
+.release_button {
+    width: 120rpx;
+    height: 120rpx;
+    position: fixed;
+    bottom: 150rpx;
+    right: 30rpx;
+    background-size: cover;
+    background-image: url('https://ofdznzfo9.qnssl.com/szdx_release_button5.png');
+}

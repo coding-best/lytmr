@@ -1,0 +1,35 @@
+<!-- 搜索页 -->
+<view class="container">
+  <!-- 搜索 -->
+  <view class="search">
+    <view class="search_arr">
+      <view class="search_icon"></view>
+      <input class="bc_text" value="{{searchValue}}" placeholder="搜索姓名/工作单位关键词（全院校友)" placeholder-style="color: rgb(180, 180, 180)" bindinput="bindKeyInput" auto-focus/>
+      <view class="clear" bindtap="clearSearch" wx:if="{{ifSearch == true}}"></view>
+    </view>
+  </view>
+  <text class="clear_text" catchtap="hrefDirectory">取消</text>
+
+  <!-- 搜索到的内容 -->
+  <view class="content">
+    <view class="content_list" wx:for="{{directoryArr}}" wx:key="index" wx:if="{{!searchValue}}">
+      <view class="content_list_list">
+        <view class="content_list_img" style="background-image: url({{item.img}})" catchtap="{{item.confirm == 0 ? 'hrefConfirm':'hrefInfo'}}"></view>
+        <view class="content_list_info">
+          <view class="content_list_name">
+            <text wx:for="{{directoryArrName[index]}}" wx:key="key" class="{{item == keyName ? 'light' : '' }}">{{item}}</text>
+          </view>
+          <text>13545699555</text>
+        </view>
+        <view class="content_list_chat" bindtap="hrefChat"></view>
+      </view>
+      <view class="content_list_business">
+        <text>工作单位：深圳市向新科技有限公司</text>
+      </view>
+    </view>
+  </view>
+  <view style="height: 40rpx"></view>
+</view>
+
+<!-- 遮罩 -->
+<view class="bg_layer"></view>

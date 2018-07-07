@@ -1,0 +1,97 @@
+.container {
+  position: relative;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 40rpx;
+  background-color: #fff;
+}
+
+.header>text {
+  font-size: 24rpx;
+  color: #333;
+}
+
+.header_right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_img {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background-size: cover;
+  margin-right: 10rpx;
+}
+
+.right {
+  width: 18rpx;
+  height: 18rpx;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_wd_%E6%88%91%E7%9A%84%E5%90%91%E5%8F%B318%E5%83%8F%E7%B4%A0.png');
+  background-size: cover;
+}
+
+/* 简介 */
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 300rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding: 32rpx 40rpx;
+}
+
+.content_title {
+  margin-bottom: 18rpx;
+}
+
+.content_title>text {
+  font-size: 24rpx;
+  color: #333;
+}
+
+textarea {
+  width: 670rpx;
+  height: 200rpx;
+}
+
+.placeholder {
+  font-size: 24rpx;
+  color: #666;
+}
+
+/* 字数统计 */
+
+.word {
+  display: flex;
+  position: absolute;
+  right: 120rpx;
+  bottom: 27rpx;
+}
+
+.word >text {
+  font-size: 24rpx;
+  color: rgb(204, 204, 204);
+}
+
+.next {
+  width: 670rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 50rpx;
+  background-color: #3c98e7;
+  color: #fff;
+  margin: 40rpx;
+  font-size: 26rpx;
+}

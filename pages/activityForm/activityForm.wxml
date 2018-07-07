@@ -1,0 +1,14 @@
+<!-- 报名表单设置 -->
+<view class="container">
+
+    <view class="list" wx:for="{{info}}" wx:key="index">
+        <input type="text" value="{{info[index]}}" bindinput="bindKeyInput" />
+    </view>
+    <view class="add_list" bindtap="addView">
+        <view class="add"></view>
+        <text>新增报名项</text>
+    </view>
+    <view class="bottom_button" bindtap="hrefActivityPost">
+        <text>完成</text>
+    </view>
+</view>

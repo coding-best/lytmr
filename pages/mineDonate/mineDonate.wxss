@@ -1,0 +1,84 @@
+.container {
+  position: relative;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+}
+
+text {
+  font-size: 24rpx;
+}
+
+.header {
+  margin: 40rpx;
+}
+
+.header>text {
+  font-size: 28rpx;
+  color: rgb(60, 152, 231);
+}
+
+.header>text:first-child {
+  font-size: 26rpx;
+  color: #333;
+}
+
+.header>text:last-child {
+  font-size: 20rpx;
+  color: #333;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 88rpx;
+  background-color: #fff;
+  margin-bottom: 10rpx;
+  padding: 0 40rpx;
+}
+
+.list_left {
+  width: 570rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list_left>text {
+  color: #333;
+  margin-right: 40rpx;
+}
+
+.list_right >text {
+  font-size: 26rpx;
+  color: rgb(60, 152, 231);
+}
+
+.list_right>text:last-child {
+  font-size: 20rpx;
+  color: #333;
+}
+
+/* 没有 */
+
+.no {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.no_icon {
+  width: 160rpx;
+  height: 160rpx;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_wd_lxwm7%E6%9A%82%E6%97%A0%E6%8D%90%E6%AC%BE%E8%AE%B0%E5%BD%95150%E5%83%8F%E7%B4%A0.png');
+  background-size: cover;
+  margin-top: 200rpx;
+  margin-bottom: 60rpx;
+}
+
+.no >text {
+  font-size: 22rpx;
+  color: #999;
+}

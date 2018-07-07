@@ -1,0 +1,19 @@
+<!-- 活动详情描述 -->
+<view class="container">
+<view class="content">
+  <textarea value="{{describle}}" placeholder="在此输入需求详情" placeholder-class="placeholder" bindinput="textarea" maxlength="1000">
+    <view class="word">
+      <text style="color: rgb(60, 152, 231)">{{describleNum}}</text>
+      <text>/</text>
+      <text>1000</text>
+    </view>
+  </textarea>
+
+  <view class="img">
+    <image class="img_single" src="{{item}}" mode="aspectFill" wx:for="{{imgUrl}}" wx:key="index" />
+    <view class="addImg" bindtap="chooseImg"></view>
+  </view>
+  <text>上传图片不能大于2M，最多只能上传8张图片（格式为JPG或PNG）</text>
+</view>
+  <view class="next" bindtap="hrefActivityPost">保存</view>
+</view>

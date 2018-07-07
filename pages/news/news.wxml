@@ -1,0 +1,108 @@
+<!-- 新闻页 -->
+<view class="container">
+  <view class="navbar">
+    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+  </view>
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange">
+    <!--  全部  -->
+    <swiper-item class="currentTab">
+        <view class="news">
+          <!-- 每列 -->
+          <view wx:for="{{newsArr}}" wx:key="index" class="news_list" wx:if="{{(index+1) % 4 !== 0}}" bindtap="hrefNewsDetail">
+            <view>
+              <view class="slide-image news_list_img" style="background-image: url({{item.img}});"></view>
+            </view>
+            <view class="news_list_text">
+              <text class="news_list_text_title">{{newsArr[index].title}}</text>
+              <view class="news_list_text_bottom">
+                <text>#{{item.category}}</text>
+                <text>{{item.time}}</text>
+              </view>
+            </view>
+            <view class="clear"></view>
+          </view>
+          <view wx:for="{{newsArr}}" wx:key="index" class="news_list news_list_big" wx:if="{{(index+1) % 4 == 0}}" bindtap="hrefNewsDetail">
+            <view class="news_list_text news_list_text_big">
+              <text class="news_list_text_title">{{newsArr[index].title}}</text>
+              <view class="slide-image news_list_img_big" style="background-image: url({{item.img}});"></view>
+              <view class="news_list_text_bottom news_list_text_bottom_big">
+                <text>#{{item.category}}</text>
+                <text>{{item.time}}</text>
+              </view>
+            </view>
+            <view class="clear"></view>
+          </view>
+        </view>
+        <view class="news">
+          <!-- 每列 -->
+          <view wx:for="{{newsArr}}" wx:key="index" class="news_list" wx:if="{{(index+1) % 4 !== 0}}" bindtap="hrefNewsDetail">
+            <view>
+              <view class="slide-image news_list_img" style="background-image: url({{item.img}});"></view>
+            </view>
+            <view class="news_list_text">
+              <text class="news_list_text_title">{{newsArr[index].title}}</text>
+              <view class="news_list_text_bottom">
+                <text>#{{item.category}}</text>
+                <text>{{item.time}}</text>
+              </view>
+            </view>
+            <view class="clear"></view>
+          </view>
+          <view wx:for="{{newsArr}}" wx:key="index" class="news_list news_list_big" wx:if="{{(index+1) % 4 == 0}}" bindtap="hrefNewsDetail">
+            <view class="news_list_text news_list_text_big">
+              <text class="news_list_text_title">{{newsArr[index].title}}</text>
+              <view class="slide-image news_list_img_big" style="background-image: url({{item.img}});"></view>
+              <view class="news_list_text_bottom news_list_text_bottom_big">
+                <text>#{{item.category}}</text>
+                <text>{{item.time}}</text>
+              </view>
+            </view>
+            <view class="clear"></view>
+          </view>
+        </view>
+    </swiper-item>
+
+    <!-- 学校新闻 -->
+    <swiper-item class="currentTab">
+      <scroll-view scroll-y="true">
+        <view class="news">
+          <!-- 每列 -->
+          <view wx:for="{{newsArr}}" wx:key="index" class="news_list" wx:if="{{(index+1) % 4 !== 0}}" bindtap="hrefNewsDetail">
+            <view>
+              <view class="slide-image news_list_img" style="background-image: url({{item.img}});"></view>
+            </view>
+            <view class="news_list_text">
+              <text class="news_list_text_title">{{newsArr[index].title}}</text>
+              <view class="news_list_text_bottom">
+                <text>#{{item.category}}</text>
+                <text>{{item.time}}</text>
+              </view>
+            </view>
+            <view class="clear"></view>
+          </view>
+          <view wx:for="{{newsArr}}" wx:key="index" class="news_list news_list_big" wx:if="{{(index+1) % 4 == 0}}" bindtap="hrefNewsDetail">
+            <view class="news_list_text news_list_text_big">
+              <text class="news_list_text_title">{{newsArr[index].title}}</text>
+              <view class="slide-image news_list_img_big" style="background-image: url({{item.img}});"></view>
+              <view class="news_list_text_bottom news_list_text_bottom_big">
+                <text>#{{item.category}}</text>
+                <text>{{item.time}}</text>
+              </view>
+            </view>
+            <view class="clear"></view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <!-- 学院新闻 -->
+    <swiper-item class="currentTab">
+      <scroll-view scroll-y="true"></scroll-view>
+    </swiper-item>
+
+    <!-- 校友新闻 -->
+    <swiper-item class="currentTab">
+      <scroll-view scroll-y="true"></scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

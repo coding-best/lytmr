@@ -1,0 +1,11 @@
+<!-- 提交审核 -->
+<view class="container">
+  <view class="content">
+    <view class="content_img"></view>
+    <text>您发起的活动已提交</text>
+    <text>信息审核中，审核进度请留意我的-我发起的活动</text>
+  </view>
+  <view class="content_button" bindtap="hrefActivity">
+    <text>返回活动页</text>
+  </view>
+</view>

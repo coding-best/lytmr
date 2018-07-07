@@ -1,0 +1,33 @@
+<!-- 捐款 -->
+<view class="container">
+  <view class="title_img" bindtap="hrefDonateIntroduce">
+    <view class="title_desc"></view>
+    <text>点击查看深圳大学土木工程学院教育基金会总介绍</text>
+  </view>
+  
+  <view class="news" wx:for="{{donateArr}}" wx:key="index" bindtap="hrefDonateDetail">
+    <view class="news_list">
+      <view class="img_view">
+        <view class="slide-image news_list_img" style="background-image: url({{item.img}});"></view>
+      </view>
+      <view class="news_list_text">
+        <text class="news_list_text_title">{{item.title}}</text>
+        <view class="news_list_text_contain">
+          <text>截止时间：{{item.activityDetail}}</text>
+        </view>
+        <view class="news_list_text_bottom">
+          <text><text style="color: rgb(60, 152, 231);">{{item.signUpNum}} </text>位爱心人士已捐款</text>
+          <view>
+            <view class="Press news_list_text_button">
+              <text class="news_list_text_text">我要捐款</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="clear"></view>
+    </view>
+  </view>
+</view>
+
+<!-- 遮罩 -->
+<view class="bg_layer"></view>

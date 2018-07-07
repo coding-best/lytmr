@@ -1,0 +1,101 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/activityPost/activityPost",
+    "pages/recruitPostTwo/recruitPostTwo",
+    "pages/recruitPostThree/recruitPostThree",
+    "pages/business/business",
+    "pages/releaseAnnounce/releaseAnnounce",
+    "pages/mineCompile/mineCompile",    
+    "pages/mine/mine",    
+    "pages/donateDetail/donateDetail",
+    "pages/activityForm/activityForm",
+    "pages/recruitPostOne/recruitPostOne",
+    "pages/fillIn/fillIn",
+    "pages/activityDesc/activityDesc",
+    "pages/directorySelect/directorySelect",
+    "pages/mineContact/mineContact",
+    "pages/mineDonate/mineDonate",
+    "pages/mineInfo/mineInfo",
+    "pages/mineChat/mineChat",
+    "pages/minePartake/minePartake",
+    "pages/mineActivityChange/mineActivityChange",
+    "pages/mineActivity/mineActivity",
+    "pages/mineRelease/mineRelease",
+    "pages/mineRecruitChange/mineRecruitChange",
+    "pages/mineRecruit/mineRecruit",
+    "pages/recruitDetail/recruitDetail",
+    "pages/businessDetailMajor/businessDetailMajor",
+    "pages/activitySignUp/activitySignUp",
+    "pages/activity/activity",
+    "pages/newsDetail/newsDetail",
+    "pages/donateIntroduce/donateIntroduce",
+    "pages/donate/donate",
+    "pages/activityDetail/activityDetail",
+    "pages/directory/directory",
+    "pages/businessDetail/businessDetail",
+    "pages/recruit/recruit",
+    "pages/activitySignSubmit/activitySignSubmit",
+    "pages/activitySubmit/activitySubmit",
+    "pages/chat/chat",
+    "pages/recruitSubmit/recruitSubmit",
+    "pages/release/release",
+    "pages/releaseSubmit/releaseSubmit",
+    "pages/check/check",
+    "pages/infoPrivacy/infoPrivacy",
+    "pages/info/info",
+    "pages/confirm/confirm",
+    "pages/news/news",
+    "pages/classmate/classmate"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3c98e7",
+    "navigationBarTitleText": "荔园土木人",
+    "navigationBarTextStyle": "#fff",
+    "enablePullDownRefresh": false,
+    "disableScroll": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/nor/首页.jpg",
+        "selectedIconPath": "images/首页1.jpg"
+      },
+      {
+        "pagePath": "pages/classmate/classmate",
+        "text": "校友",
+        "iconPath": "images/nor/friend.jpg",
+        "selectedIconPath": "images/friend1.jpg"
+      },
+      {
+        "pagePath": "pages/activity/activity",
+        "text": "活动",
+        "iconPath": "images/nor/emoji.jpg",
+        "selectedIconPath": "images/emoji1.jpg"
+      },
+      {
+        "pagePath": "pages/donate/donate",
+        "text": "捐赠",
+        "iconPath": "images/nor/favor.jpg",
+        "selectedIconPath": "images/favor1.jpg"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/nor/friend_add.jpg",
+        "selectedIconPath": "images/friend_add1.jpg"
+      }
+    ],
+    "color": "#676767",
+    "selectedColor": "#3c98e7",
+    "backgroundColor": "#fff",
+    "borderStyle": "black"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}

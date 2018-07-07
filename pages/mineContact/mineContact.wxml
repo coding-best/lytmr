@@ -1,0 +1,47 @@
+<!-- 联系我们 -->
+<view class="container">
+  <!-- 顶部图片 -->
+  <view class="header">
+    <view class="header_img"></view>
+  </view>
+
+  <!-- 介绍 -->
+  <view class="desc {{more?'all':''}}">
+    <text>深圳大学土木工程学院的前身是结构与市政工程系，1997年4月，由于实行学院制，于是建筑与土木工程学院便由建筑系、结构与市政工程系和环境设计系合并成立，是深圳大学成立的第一个学院。在2006年应学科快速发展的需要，成立了独立的土木工程学院。\n\n</text>
+    <text>2003年，由85级土木校友邓学勤发起成立建筑与土木工程学院校友会，以“联络校友、团结互助、共同发展”为宗旨，以“服务校友、服务学院”为活动理念，致力于“联络校友，服务校友；回馈学院，服务育人”。应学科快速发展的需要，2006年9月，深圳大学成立了独立的土木工程学院，由此，校友会变成了专属土木工程学院的组织。同时，深大土木工程学院校友会第一届理事会顺势成立，由邓学勤校友担任校友会会长，由邢锋校友担任名誉会长。\n\n</text>
+    <text>近年来，已毕业的土木校友已到达3000多人，校友会作为校友和母校之间交流沟通的桥梁，在团结广大校友，加强校友与校友间、校友与学校间的联系，增进校友对学院的关心与了解，凝聚校友的力量，共同推进学院教育事业的发展，促进校友们的共同进步上起到了一个推进的作用。</text>
+  </view>
+
+  <!-- 展开更多 -->
+  <view class="more" bindtap="openMore" wx:if="{{!more}}">
+    <view class="bottom"></view>
+    <text>展开查看更多</text>
+  </view>
+
+  <!-- 收起更多 -->
+  <view class="more" bindtap="closeMore" wx:if="{{more}}">
+    <view class="bottom scale"></view>
+    <text>收起</text>
+  </view>
+  
+  <!-- 底下列表 -->
+  <view class="content">
+    <view class="content_list">
+      <view class="content_list_icon" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_wd_lxwm%E5%AE%9A%E4%BD%8D.png')"></view>
+      <text>地址：广东省深圳市深圳大学土木工程学院</text>
+    </view>
+    <view class="content_list">
+      <view class="content_list_icon" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_wd_lxwm%E7%94%B5%E8%AF%9D.png')"></view>
+      <text>电话：0755-26916945</text>
+    </view>
+    <view class="content_list">
+      <view class="content_list_icon" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_wd_lxwm%E9%82%AE%E7%AE%B1.png')"></view>
+      <text>邮箱：szutumu@szucceaa.com</text>
+    </view>
+    <view class="content_list">
+      <view class="content_list_icon" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_wd_lxwm%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7.png')"></view>
+      <text>微信公众号：szutumu</text>
+    </view>
+  </view>
+  <view style="height: 20rpx"></view>
+</view>

@@ -1,0 +1,36 @@
+<!-- 我的捐赠 -->
+<view class="container">
+  <view class="content" wx:if="{{myDonate}}">
+    <view class="header">
+      <text>已捐款：</text>
+      <text>210</text>
+      <text> 元</text>
+    </view>
+    <view class="list">
+      <view class="list_left">
+        <text>2018-06-10</text>
+        <text>正中爱心基金会</text>
+      </view>
+      <view class="list_right">
+        <text>10 </text>
+        <text>元</text>
+      </view>
+    </view>
+    <view class="list">
+      <view class="list_left">
+        <text>2018-06-10</text>
+        <text>深大土木教育基金会“筑梦新生”公益活动</text>
+      </view>
+      <view class="list_right">
+        <text>10 </text>
+        <text>元</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 没有捐赠 -->
+  <view class="no" wx:if="{{!myDonate}}">
+    <view class="no_icon"></view>
+    <text>暂无收到私信~</text>
+  </view>
+</view>

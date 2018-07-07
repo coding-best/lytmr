@@ -1,0 +1,46 @@
+<!-- 我发布的活动 -->
+<view class="container">
+  <view class="content"  wx:if="{{myActivity}}">
+    <view class="content_list {{item.state == 2||item.state == 3? 'reviewed':''}}" wx:for="{{activeArr}}" wx:key="index" catchtap="hrefActivityDetail">
+      <view class="name">
+        <text>{{item.title}}</text>
+        <view class="right"></view>
+      </view>
+      <view class="date">
+        <text>截止时间：{{item.stopTime}}</text>
+      </view>
+      <view class="signup" style="border:{{item.state == 2||item.state == 3? 'none':''}}">
+        <text><text style="color: rgb(60, 152, 231)">{{item.signUpNum}}</text>/限50人报名</text>
+        <text style="color: #999" wx:if="{{item.state == 0}}">已结束</text>
+        <text style="color: #3c98e7" wx:if="{{item.state == 1}}">进行中</text>
+        <text style="color: #f6c65f" wx:if="{{item.state == 2}}">审核中</text>
+        <text style="color: #f34b43" wx:if="{{item.state == 3}}">审核失败</text>
+      </view>
+      <view class="recruit-list-button" wx:if="{{item.state == 0||item.state == 1}}">
+        <view class="button" catchtap="hrefMineActivityChange" data-change="change">报名管理</view>
+        <view class="button" catchtap="closeActivity">关闭报名</view>
+      </view>
+    </view>
+  </view>
+
+  <view style="height: 20rpx"></view>
+
+  <!-- 没有招聘 -->
+  <view class="no" wx:if="{{!myActivity}}">
+    <view class="no_icon"></view>
+    <text>暂无发布需求~</text>
+  </view>
+
+  <!-- 关闭招聘确认 -->
+  <view class="alert" wx:if="{{layer}}" catchtouchmove='true'>
+    <view class="desc">
+      <text>关闭报名后不可恢复，确定关闭？</text>
+    </view>
+    <view class="desc_button" bindtap="clickCloseLayer">
+      <text>确定</text>
+    </view>
+  </view>
+
+  <!-- 遮罩 -->
+  <view class="layer" wx:if="{{layer}}" bindtap="clickCloseLayer" catchtouchmove='true'></view>
+</view>

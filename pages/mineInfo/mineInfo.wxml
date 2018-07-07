@@ -1,0 +1,105 @@
+<!-- 我的信息 -->
+<view class="container">
+  <!-- 基本信息 -->
+  <view class="container_content container_content_first">
+    <view class="content_list content_list_title">
+      <view class="title_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AFicon.png')"></view>
+      <text>基本信息</text>
+      <text>*</text>
+    </view>
+    <view class="content_list">
+      <text>姓名</text>
+      <text>吴少航</text>
+    </view>
+    <view class="content_list">
+      <text>性别</text>
+      <text>男</text>
+    </view>
+    <view class="content_list">
+      <text>生日</text>
+      <text>1996-08-12</text>
+    </view>
+    <view class="content_list">
+      <text>联系电话</text>
+      <text>15876092583</text>
+    </view>
+    <view class="content_list">
+      <text>邮箱</text>
+      <text>583175694@qq.com</text>
+    </view>
+  </view>
+  <!-- 院系资料 -->
+  <view class="container_content">
+    <view class="content_list content_list_title">
+      <view class="title_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E9%99%A2%E7%B3%BB%E8%B5%84%E6%96%99icon.png')"></view>
+      <text>院系资料</text>
+      <text>*</text>
+    </view>
+    <view class="content_list">
+      <text>学历</text>
+      <text>本科</text>
+    </view>
+    <view class="content_list">
+      <text>入学年份</text>
+      <text>2014-09</text>
+    </view>
+    <view class="content_list">
+      <text>专业</text>
+      <text>通信工程</text>
+    </view>
+  </view>
+  <!-- 工作信息 -->
+  <view class="container_content">
+    <view class="content_list content_list_title">
+      <view class="title_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E5%B7%A5%E4%BD%9C%E4%BF%A1%E6%81%AFicon.png')"></view>
+      <text>工作信息</text>
+      <text>*</text>
+    </view>
+    <view class="content_list">
+      <text>工作单位</text>
+      <text>深圳市小行家网络科技有限公司</text>
+      <view class="right"></view>
+    </view>
+    <view class="content_list">
+      <text>所属行业</text>
+      <text>IT</text>
+      <view class="right"></view>
+    </view>
+    <view class="content_list">
+      <text>工作职位</text>
+      <text>前端程序员</text>
+      <view class="right"></view>
+    </view>
+  </view>
+
+  <!-- 其他 -->
+  <view class="container_content">
+    <view class="content_list content_list_title">
+      <view class="title_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E5%85%B6%E4%BB%96icon.png')"></view>
+      <text>其他</text>
+      <text>*</text>
+    </view>
+    <view class="content_list">
+      <text>特长</text>
+      <text>特帅</text>
+      <view class="right"></view>
+    </view>
+  </view>
+
+  <!-- 隐私 -->
+  <view class="container_content">
+    <view class="content_list content_list_title">
+      <view class="title_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E9%9A%90%E7%A7%81icon.png')"></view>
+      <text>隐私</text>
+      <text>*</text>
+    </view>
+    <view class="content_list content_switch">
+      <text>隐藏个人信息</text>
+      <switch bindchange="switch1Change" color="rgb(60, 152, 231)"/>
+    </view>
+  </view>
+
+  <view class="next" bindtap="hrefMine">保存修改</view>
+
+  <view style="height: 20rpx"></view>
+</view>

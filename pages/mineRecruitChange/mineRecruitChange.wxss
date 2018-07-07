@@ -1,0 +1,30 @@
+
+.content {
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 20rpx;
+}
+
+.content_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90rpx;
+    border-bottom: 1rpx solid #efefef;
+    line-height: 90rpx;
+    font-size: 24rpx;
+    margin-left: 40rpx;
+}
+
+.content_list:last-child {
+  border: none;
+}
+
+.right {
+    position: relative;
+    width: 18rpx;
+    height: 18rpx;
+    right: 40rpx;
+    background-size: contain;
+    background-image: url('https://ofdznzfo9.qnssl.com/szdx_right2.png');
+}

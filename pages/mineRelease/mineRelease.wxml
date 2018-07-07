@@ -1,0 +1,53 @@
+<!-- 我发布的需求 -->
+<view class="container">
+  <view class="content"  wx:if="{{myRelease}}">
+    <view class="content_list" bindtap="hrefReleaseDetail">
+      <view class="name">
+        <text>湛江坡头区17亩工业用地出租或合作！</text>
+        <view class="right"></view>
+      </view>
+      <view class="date">
+        <text>发布于：2018-01-10 17:20</text>
+      </view>
+      <view class="recruit-list-button">
+        <view class="button" catchtap="hrefReleaseAnnounce" data-change="change">修改需求</view>
+        <view class="button" catchtap="closeRecruit">关闭需求</view>
+      </view>
+    </view>
+
+    <view class="content_list">
+      <view class="name">
+        <text>湛江坡头区17亩工业用地出租或合作！</text>
+        <view class="right"></view>
+      </view>
+      <view class="date">
+        <text>发布于：2018-01-10 17:20</text>
+      </view>
+      <view class="recruit-list-button">
+        <view class="button" catchtap="hrefReleaseAnnounce" data-change="change">修改需求</view>
+        <view class="button" catchtap="closeRecruit">关闭需求</view>
+      </view>
+    </view>
+  </view>
+
+  <view style="height: 20rpx"></view>
+
+  <!-- 没有需求 -->
+  <view class="no" wx:if="{{!myRelease}}">
+    <view class="no_icon"></view>
+    <text>暂无发布需求~</text>
+  </view>
+
+  <!-- 关闭需求确认 -->
+  <view class="alert" wx:if="{{layer}}" catchtouchmove='true'>
+    <view class="desc">
+      <text>关闭需求后不可恢复，确定关闭？</text>
+    </view>
+    <view class="desc_button" bindtap="clickCloseLayer">
+      <text>确定</text>
+    </view>
+  </view>
+
+  <!-- 遮罩 -->
+  <view class="layer" wx:if="{{layer}}" bindtap="clickCloseLayer" catchtouchmove='true'></view>
+</view>

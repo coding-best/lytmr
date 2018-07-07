@@ -1,0 +1,47 @@
+<!-- 需求发布 -->
+<view class="container">
+  <view class="navbar">
+    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+  </view>
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange">
+    <!-- 默认排序 -->
+    <swiper-item class="currentTab">
+      <view class="activity">
+        <view wx:for="{{needArr}}" wx:key="index" class="activity_list" bindtap="hrefReleaseDetail">
+          <view class="listBar" style="background-color: {{index%2 ==0? '#3c98e7':'#f8d27f'}}"></view>
+          <text class="news_list_title">{{item.title}}</text>
+          <view class="news_list_content">
+            <view class="news_list_content-left">
+              <view class="news_list_img" style="background-image: url({{item.img}})"></view>
+              <text class="news_list_name">{{item.name}}</text>
+            </view>
+            <text class="news_list_date">{{item.date}}</text>
+          </view>
+          <view class="clear"></view>
+        </view>
+      </view>
+    </swiper-item>
+
+    <!-- 最新发布 -->
+    <swiper-item class="currentTab">
+      <view class="activity">
+        <view wx:for="{{needArrNews}}" wx:key="index" class="activity_list" bindtap="hrefReleaseDetail">
+          <view class="listBar" style="background-color: {{index%2 ==0? '#3c98e7':'#f8d27f'}}"></view>
+          <text class="news_list_title">{{item.title}}</text>
+          <view class="news_list_content">
+            <view class="news_list_content-left">
+              <view class="news_list_img" style="background-image: url({{item.img}})"></view>
+              <text class="news_list_name">{{item.name}}</text>
+            </view>
+            <text class="news_list_date">{{item.date}}</text>
+          </view>
+          <view class="clear"></view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+  <view class="release_button" bindtap="hrefAnnounce"></view>
+</view>
+
+<!-- 遮罩 -->
+<view class="bg_layer"></view>

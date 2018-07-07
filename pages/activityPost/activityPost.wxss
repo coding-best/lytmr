@@ -1,0 +1,157 @@
+.container {
+  position: relative;
+  height: 100%;
+  /* -webkit-overflow-scrolling: touch; */
+  overflow-y: scroll;
+  /* overflow-x: hidden; */
+}
+
+input {
+  position: relative;
+  width: 512rpx;
+  right: 40rpx;
+  text-align: right;
+}
+
+.descInput {
+  width: 670rpx;
+  height: 300rpx;
+  word-wrap: break-word;
+  line-height: 40rpx;
+}
+
+textarea {
+  width: 670rpx;
+  letter-spacing: 20;
+}
+
+.placeholder {
+  color: #c7c7c7;
+  font-size: 24rpx;
+}
+
+.picker {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 215rpx;
+  height: 80rpx;
+  text-align: right;
+  color: rgb(51, 51, 51);
+}
+
+.blank {
+  width: 160rpx;
+}
+
+/* 底下列表 */
+
+.content {
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.content_img {
+  position: relative;
+  width: 100%;
+  height: 540rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  margin-bottom: 20rpx;
+  background-size: cover;
+}
+
+.content_img_icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -47rpx;
+  margin-left: -47rpx;
+  width: 94rpx;
+  height: 94rpx;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_WechatIMG3861.png');
+  background-size: cover;
+}
+
+.content_img_text {
+  position: absolute;
+    left: 50%;
+  top: 50%;
+  margin-top: 76rpx;
+  margin-left: -84rpx;
+  font-size: 24rpx;
+  color: rgb(204, 204, 204);
+  height: 32rpx;
+}
+
+.content_list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 90rpx;
+  border-bottom: 1rpx solid #efefef;
+  line-height: 90rpx;
+  font-size: 24rpx;
+  margin-left: 40rpx;
+}
+
+.content_list:last-child {
+  border: none;
+}
+
+.content_list_intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: auto !important;
+}
+
+.content_list>text:first-child {
+  display: block;
+  width: 176rpx;
+  color: rgb(102, 102, 102);
+}
+
+.star {
+  color: rgb(255, 47, 49);
+  margin-left: 6rpx;
+}
+
+.content_list>text:last-child {
+  color: rgb(51, 51, 51);
+  margin-right: 40rpx;
+}
+
+.next {
+  width: 670rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 50rpx;
+  background-color: #3c98e7;
+  color: #fff;
+  margin: 40rpx;
+  font-size: 26rpx;
+}
+
+.upload_img {
+  margin-right: 40rpx;
+  width: 64rpx;
+  height: 64rpx;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_upload_img.png');
+  background-size: cover;
+}
+
+.right {
+  position: relative;
+  width: 18rpx;
+  height: 18rpx;
+  right: 40rpx;
+  background-size: contain;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_WechatIMG5002.png');
+}

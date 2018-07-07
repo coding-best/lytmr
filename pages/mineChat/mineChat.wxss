@@ -1,0 +1,90 @@
+.container {
+  position: relative;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+}
+
+.content {
+  padding: 0 20rpx;
+  background-color: #fff;
+}
+
+.content_list {
+  /* height: 112rpx; */
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #e6e6e6;
+}
+
+.content_list:last-child {
+  border: none;
+}
+
+.content_text {
+  width: 87%;
+  height: 70rpx;
+}
+
+.head {
+  width: 70rpx;
+  height: 70rpx;
+  background-size: cover;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+
+.name {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.name > text:first-child {
+  font-size: 26rpx;
+  color: rgb(60, 152, 231);
+}
+
+.name > text:last-child {
+  position: relative;
+  left: 14rpx;
+  font-size: 20rpx;
+  color: #999;
+}
+
+.chat {
+  width: 616rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: -8rpx;
+}
+
+.chat > text {
+  font-size: 24rpx;
+  color: #666;
+}
+
+/* 没有私信 */
+
+.no {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.no_icon {
+  width: 160rpx;
+  height: 160rpx;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_wd_%E6%B2%A1%E6%9C%89%E7%A7%81%E4%BF%A1%E7%9A%84%E7%8A%B6%E6%80%81160%E5%83%8F%E7%B4%A0.png');
+  background-size: cover;
+  margin-top: 200rpx;
+  margin-bottom: 60rpx;
+}
+
+.no >text {
+  font-size: 22rpx;
+  color: #999;
+}

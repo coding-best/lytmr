@@ -1,0 +1,13 @@
+<!-- 验证界面 -->
+<view class="container">
+  <view class="input_num">
+    <view class="input_num_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_confirm_num2.png');"></view>
+    <input value="" placeholder="请输入手机号" placeholder-class="inplaceholderClass"></input>
+  </view>
+  <view class="input_code">
+    <view class="input_num_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_confirm_con2.png');"></view>
+    <input value="" placeholder="请输入验证码" placeholder-class="inplaceholderClass"></input>
+    <view class="get_code">获取验证码</view>
+  </view>
+  <view class="next" bindtap="hrefFillIn">下一步</view>
+</view>

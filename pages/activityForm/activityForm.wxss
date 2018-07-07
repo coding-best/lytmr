@@ -1,0 +1,67 @@
+.container {
+  position: relative;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.list {
+    width: 100%;
+    height: 88rpx;
+    background-color: #fff;
+    border-bottom: 1rpx solid #e6e6e6;
+    line-height: 88rpx;
+    padding-left: 40rpx;
+}
+
+.list >text {
+    font-size: 24rpx;
+    color: rgb(68, 68, 68);
+}
+
+.add_list {
+  display: flex;
+  align-items: center;
+    width: 100%;
+    height: 88rpx;
+    background-color: #fff;
+    line-height: 88rpx;
+}
+
+.add {
+  width: 16rpx;
+  height: 16rpx;
+  background-size: cover;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E6%8A%A5%E5%90%8D%E8%AE%BE%E7%BD%AEicon.png');
+  margin-right: 10rpx;
+  margin-left: 302rpx;
+}
+
+.add_list>text {
+    font-size: 24rpx;
+    color: rgb(60, 152, 231);
+}
+
+input {
+    height: 88rpx;
+    font-size: 24rpx;
+    color: rgb(68, 68, 68);
+}
+
+.bottom_button {
+    position: absolute;
+    bottom: 40rpx;
+    width: 670rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin: 0 40rpx;
+    background-color: rgb(60, 152, 231);
+    border-radius: 50rpx;
+    text-align: center;
+}
+
+.bottom_button>text {
+    font-size: 26rpx;
+    color: #fff;
+}

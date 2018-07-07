@@ -1,0 +1,217 @@
+
+.top {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  height: 104rpx;
+  background-color: #fff;
+  padding: 0 40rpx;
+  z-index: 999;
+  border-bottom: 1px solid #f8f8f8;
+}
+
+/*button*/
+
+.btn {
+  width: 105rpx;
+  color: rgb(68, 68, 68);
+  font-size: 24rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 20rpx 0;
+}
+
+.top .icon {
+  width: 16rpx;
+  height: 16rpx;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E4%B8%8B%E6%8B%89icon.png');
+  background-size: cover;
+  margin-top: 4rpx;
+}
+
+/*mask*/
+
+.drawer_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 104rpx;
+  left: 0;
+  z-index: 997;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+}
+
+/*content*/
+
+.drawer_attr_box {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 104rpx;
+  left: 0;
+  z-index: 998;
+  background: #fff;
+}
+
+.drawer_content {
+  padding: 0rpx 40rpx;
+  height: 773rpx;
+  overflow-y: scroll;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90rpx;
+  font-size: 24rpx;
+  color: rgb(68, 68, 68);
+  border-bottom: 1px solid #f8f8f8;
+}
+
+.gou {
+  width: 25rpx;
+  height: 25rpx;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_gou2.png');
+  background-size: cover;
+  margin-top: 4rpx;
+}
+
+/* 搜索 */
+
+.search {
+  margin: 40rpx;
+  width: 68%;
+  height: 70rpx;
+  background-color: #fff;
+  border: 1px solid #efefef;
+  border-radius: 6px;
+}
+
+.search_arr {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.search_icon {
+  width: 22rpx;
+  height: 22rpx;
+  background-size: cover;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_search.png');
+  margin: 24rpx 17rpx 24rpx 20rpx;
+}
+
+.search_arr input {
+  height: 70rpx;
+  width: 80%;
+  border-radius: 5px;
+  line-height: 70rpx;
+  font-size: 22rpx;
+  font-weight: 300;
+  color: #333;
+}
+
+/* 列表 */
+
+.list {
+  margin: 0 20rpx 24rpx 24rpx;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+.title {
+  height: 176rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 20rpx;
+  border-bottom: 1rpx solid rgb(230, 230, 230);
+}
+
+.title .title_img {
+  width: 180rpx;
+  height: 120rpx;
+  background-size: cover;
+  border: 0.5rpx solid #efefef;
+  border-radius: 6px;
+}
+
+.title .title_info {
+  width: 80%;
+  margin-left: 20rpx;
+}
+
+.title .title_info .title_info_name {
+  font-size: 26rpx;
+}
+
+.recruit-list-require {
+  display: flex;
+  margin-top: 10rpx;
+}
+
+.recruit-list-require-logo {
+  width: 22rpx;
+  height: 22rpx;
+  background-size: cover;
+  margin: 4rpx 6rpx 0 0;
+}
+
+.recruit-list-require>text {
+  font-size: 22rpx;
+  margin-right: 16rpx;
+  color: #666;
+}
+
+.recruit-list-business {
+  display: flex;
+  align-items: center;
+  height: 60rpx;
+  padding: 0 20rpx;
+}
+
+.recruit-list-business .recruit-list-require-logo {
+  width: 22rpx;
+  height: 22rpx;
+  background-size: cover;
+  margin-right: 12rpx;
+  margin-bottom: 6rpx;
+}
+
+.recruit-list-business-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.recruit-list-business-title>text {
+  font-size: 22rpx;
+  color: #666;
+}
+
+.blank {
+  width: 100%;
+  height: 124rpx;
+}
+
+.ban_overflow {
+  overflow: hidden;
+}
+
+.clear {
+  width: 26rpx;
+  height: 26rpx;
+  background-image: url('https://ofdznzfo9.qnssl.com/szdx_clear.png');
+  background-size: cover;
+  margin-right: 20rpx;
+}
+/* 搜索关键词高亮 */
+
+.light {
+  color: #3c98e7 !important;
+}

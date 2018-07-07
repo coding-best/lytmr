@@ -1,0 +1,104 @@
+<!-- 校友界面 -->
+<view class="container">
+  <!-- 中间导航栏  -->
+  <view class="chooser">
+    <view class="chooser-solo" wx:for="{{chooserData}}" wx:key="index" bindtap="{{item.href}}">
+      <view class="chooser-icon" style="background-image: url({{item.img}})"></view>
+      <view class="chooser-describe">{{item.title}}</view>
+    </view>
+  </view>
+  <!-- 校企招聘 -->
+  <view class="small-title">
+    <text class="title-row">——</text>
+    <view class="title-icon" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E6%A0%A1%E4%BC%81%E6%8B%9B%E8%81%98z.png')"></view>
+    <text class="title-text">校企招聘</text>
+    <text class="title-row">——</text>
+    <view class="title-text title-more" bindtap="hrefRecruit">
+      <text>更多</text>
+      <view class="title-more-right" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_right2.png')"></view>
+    </view>
+  </view>
+  <!-- 校企招聘 -->
+  <view class="recruit">
+    <view class="recruit-list" wx:for="{{recruitArr}}" wx:key="key" bindtap="hrefRecruitDetail">
+      <view class="recruit-star"></view>
+      <view class="recruit-list-title">
+        <text>{{item.title}}</text>
+        <text wx:if="{{item.salary == '面议'}}">面议</text>
+         <text wx:elif="{{item.salary != '面议'}}"><text style="font-size: 20rpx;color: rgb(60, 152, 231);">¥</text>{{item.salary}}</text> 
+      </view>
+      <view class="recruit-list-require">
+        <view class="recruit-list-require-logo" style="background-image: url({{requires[0].img}})"></view>
+        <text>{{item.workLife}}</text>
+        <view class="recruit-list-require-logo" style="background-image: url({{requires[1].img}})"></view>
+        <text>{{item.degree}}</text>
+        <view class="recruit-list-require-logo" style="background-image: url({{requires[2].img}})"></view>
+        <text>{{item.job}}</text>
+        <text>{{item.time}}</text>
+      </view>
+      <view class="recruit-list-business">
+        <view class="recruit-list-business-logo" style="background-image: url({{item.logoImg}})"></view>
+        <view class="recruit-list-business-title">
+          <text class="recruit-list-business-name">{{item.business}}</text>
+          <text class="recruit-list-business-address">{{item.address}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 需求发布 -->
+  <view class="small-title">
+    <text class="title-row">——</text>
+    <view class="title-icon" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E9%9C%80%E6%B1%82%E5%8F%91%E5%B8%83z.png')"></view>
+    <text class="title-text">需求发布</text>
+    <text class="title-row">——</text>
+    <view class="title-text title-more" bindtap="hrefRelease">
+      <text>更多</text>
+      <view class="title-more-right" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_right2.png')"></view>
+    </view>
+  </view>
+  <!-- 需求发布 -->
+  <view class="activity-content">
+    <view class="activity" wx:for="{{newsArr}}" wx:key="index" bindtap="hrefReleaseDetail">
+      <view class="activity_list">
+        <view class="listBar" style="background-color: {{item.iconColor}}"></view>
+        <text class="news_list_title">湛江坡头区17亩工业用地出租或合作！</text>
+        <view class="news_list_content">
+          <view class="news_list_content-left">
+            <view class="news_list_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_1999dd551295f8f8%21400x400_big.jpg')"></view>
+            <text class="news_list_name">刘冰冰</text>
+          </view>
+          <text class="news_list_date">2018-02-10 17:20</text>
+        </view>
+        <view class="clear"></view>
+      </view>
+    </view>
+  </view>
+  <!-- 校友企业 -->
+  <view class="small-title">
+    <text class="title-row">——</text>
+    <view class="title-icon" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E6%A0%A1%E5%8F%8B%E4%BC%81%E4%B8%9Az.png')"></view>
+    <text class="title-text">校友企业</text>
+    <text class="title-row">——</text>
+    <view class="title-text title-more" bindtap="hrefBusiness">
+      <text>更多</text>
+      <view class="title-more-right" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_right2.png')"></view>
+    </view>
+  </view>
+  <view class="business">
+    <view class="business_card" wx:for="{{businessArr}}" wx:key="key" bindtap="hrefBusinessDetailMajor">
+      <view class="business_card_img" style="background-image: url({{item.img}})"></view>
+      <view class="business_card_text">
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 留白 -->
+  <view class="small-title blank">
+    <text class="title-row blank-row">——</text>
+    <text class="title-text blank-text">到底啦</text>
+    <text class="title-row">——</text>
+  </view>
+</view>
+
+<!-- 遮罩 -->
+<view class="bg_layer"></view>

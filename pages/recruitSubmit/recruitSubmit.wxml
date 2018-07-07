@@ -1,0 +1,12 @@
+<!-- 提交审核 -->
+<view class="container">
+  <view class="content">
+    <view class="content_img"></view>
+    <text>您的招聘已发布成功</text>
+    <text>发布的招聘可在我的我发布的招聘进行查看</text>
+  </view>
+  
+  <view class="content_button" bindtap="hrefRecruit">
+    <text>返回校友招聘页</text>
+  </view>
+</view>

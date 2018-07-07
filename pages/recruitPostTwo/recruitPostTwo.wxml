@@ -1,0 +1,71 @@
+<!-- 发布招聘 -->
+<view class="container">
+  <!-- 基本信息 -->
+  <view class="content">
+    <view class="content_list">
+      <text>上传企业logo<text class="star">*</text></text>
+      <!-- <view class="upload_img" style="background-image: url({{logoImg}});" bindtap="uploadImg"></view> -->
+      <image class="upload_img" src="{{logoImg}}" bindtap="uploadImg" mode="aspectFill"></image>
+    </view>
+    <view class="content_list">
+      <text>企业全称<text class="star">*</text></text>
+      <input type="text" placeholder="请填写企业名称" placeholder-class="placeholder" value="{{title}}" bindinput="titleInput"/>
+    </view>
+    <view class="content_list">
+      <text>企业地址<text class="star">*</text></text>
+      <input type="text" placeholder="请填写企业详细地址" placeholder-class="placeholder" value="{{address}}" bindinput="addressInput" />
+    </view>
+    <view class="content_list">
+      <text>企业性质<text class="star">*</text></text>
+      <picker mode="selector" bindchange="bindPickerNature" value="{{nature}}" range="{{natureArray}}">
+        <view class="picker">
+          {{nature}}
+        </view>
+      </picker>
+      <view class="right" wx:if="{{!nature}}"></view>
+    </view>
+    <view class="content_list">
+      <text>企业规模<text class="star">*</text></text>
+      <picker mode="selector" bindchange="bindPickerScale" value="{{scale}}" range="{{scaleArray}}">
+        <view class="picker">
+          {{scale}}
+        </view>
+      </picker>
+      <view class="right" wx:if="{{!scale}}"></view>
+    </view>
+    <view class="content_list">
+      <text>所属行业<text class="star">*</text></text>
+      <picker mode="selector" bindchange="bindPickerIndustry" value="{{industry}}" range="{{industryArray}}">
+        <view class="picker">
+          {{industry}}
+        </view>
+      </picker>
+      <view class="right" wx:if="{{!industry}}"></view>
+    </view>
+    <view class="content_list content_list_intro">
+      <text>企业简介<text class="star">*</text></text>
+      <textarea placeholder="请在此填写企业简介..." placeholder-class="placeholder" value="{{describle}}" bindinput="textarea"></textarea>
+      <view class="word">
+        <text style="color: rgb(60, 152, 231)">{{describleNum}}</text>
+        <text>/</text>
+        <text>140</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="content" wx:if="{{!recruitChange}}">
+    <view class="content_list">
+      <text>职位联系人<text class="star">*</text></text>
+      <input type="text" placeholder="请填写联系人姓名" placeholder-class="placeholder" style="text-align:right" value="{{linkman}}" bindinput="linkmanInput"/>
+    </view>
+    <view class="content_list">
+      <text>联系电话<text class="star">*</text></text>
+      <input type="text" placeholder="请填写有效联系方式" placeholder-class="placeholder" style="text-align:right" value="{{phone}}" bindinput="phoneInput" />
+    </view>
+  </view>
+
+  <view class="next" bindtap="hrefRecruitSubmit" wx:if="{{!recruitChange}}">提交发布</view>
+  <view class="next" bindtap="hrefMineRecruitChange" wx:if="{{recruitChange}}">保存修改</view>
+
+  <view style="height: 20rpx"></view>
+</view>

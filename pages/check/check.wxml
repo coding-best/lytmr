@@ -1,0 +1,11 @@
+<!-- 注册信息提交审核 -->
+<view class="container">
+  <view class="content">
+    <view class="content_img"></view>
+    <text>您的认证已提交成功</text>
+    <text>信息审核中，审核结果请留意我的校友验证</text>
+  </view>
+  <view class="content_button" bindtap="hrefDirectory">
+    <text>返回校友页</text>
+  </view>
+</view>

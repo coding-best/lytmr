@@ -1,0 +1,147 @@
+<!-- 首页 -->
+<view class="container">
+  <!-- 轮播图 -->
+  <view class="swiper">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperChange" current="{{swiperCurrent}}">
+      <block wx:for="{{imgUrls}}" wx:key="index">
+        <swiper-item data-index="{{index}}" bindtap="tapImg">
+          <image src="{{item}}" class="slide_image" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- 禁用掉自带的dots 自己来模拟一个dots -->
+    <view class="dots">
+      <block wx:for="{{imgUrls}}" wx:key="dots">
+        <view class="dot {{index == swiperCurrent ? ' active' : ''}}" data-dotsIndex="{{index}}" bindtap="tapDots"></view>
+      </block>
+    </view>
+  </view>
+  <!-- 中间导航栏  -->
+  <view class="chooser">
+    <view class="chooser-solo" wx:for="{{chooserData}}" wx:key="index" catchtap="{{item.href}}">
+      <view class="chooser-icon" style="background-image: url({{item.img}})"></view>
+      <view class="chooser-describe">{{item.title}}</view>
+    </view>
+  </view>
+  <!-- 新闻资讯 -->
+  <view class="small-title">
+    <text class="title-row">——</text>
+    <view class="title-icon" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E6%96%B0%E9%97%BBz.png')"></view>
+    <text class="title-text">新闻资讯</text>
+    <text class="title-row">——</text>
+    <view class="title-text title-more" bindtap="hrefNews">
+      <text>更多</text>
+      <view class="title-more-right" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_right2.png')"></view>
+    </view>
+  </view>
+  <!-- 新闻列表 -->
+  <view class="news">
+    <!-- 每列 -->
+    <view wx:for="{{newsArr}}" wx:key="index" class="news_list" bindtap="herfNewsDetail">
+      <view>
+        <view class="slide-image news_list_img" style="background-image: url({{item.img}});"></view>
+      </view>
+      <view class="news_list_text">
+        <text class="news_list_text_title">{{newsArr[index].title}}</text>
+        <view class="news_list_text_bottom">
+          <text>#{{item.category}}</text>
+          <text>{{item.time}}</text>
+        </view>
+      </view>
+      <view class="clear"></view>
+    </view>
+  </view>
+  <!-- 需求发布 -->
+  <view class="small-title">
+    <text class="title-row">——</text>
+    <view class="title-icon" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E9%9C%80%E6%B1%82%E5%8F%91%E5%B8%83z.png')"></view>
+    <text class="title-text">需求发布</text>
+    <text class="title-row">——</text>
+    <view class="title-text title-more" bindtap="hrefRelease">
+      <text>更多</text>
+      <view class="title-more-right" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_right2.png')"></view>
+    </view>
+  </view>
+  <!-- 需求发布 -->
+  <view class="activity">
+    <view wx:for="{{newsArr}}" wx:key="index" class="activity_list" bindtap="hrefReleaseDetail">
+      <view class="listBar" style="background-color: {{item.iconColor}}"></view>
+      <text class="news_list_title">湛江坡头区17亩工业用地出租或合作！</text>
+      <view class="news_list_content">
+        <view class="news_list_content-left">
+          <view class="news_list_img" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_1999dd551295f8f8%21400x400_big.jpg')"></view>
+          <text class="news_list_name">刘冰冰</text>
+        </view>
+        <text class="news_list_date">2018-02-10 17:20</text>
+      </view>
+      <view class="clear"></view>
+    </view>
+  </view>
+  <!-- 活动 -->
+  <view class="small-title">
+    <text class="title-row">——</text>
+    <view class="title-icon" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E6%B4%BB%E5%8A%A8z.png')"></view>
+    <text class="title-text">活动</text>
+    <text class="title-row">——</text>
+    <view class="title-text title-more" bindtap="hrefActivity">
+      <text>更多</text>
+      <view class="title-more-right" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_right2.png')"></view>
+    </view>
+  </view>
+  <!-- 活动 -->
+  <view class="news activity">
+    <view class="news_list active_list" wx:for="{{activeArr}}" wx:key="key" bindtap="hrefActivityDetail">
+      <view class="active_list_img" style="background-image: url({{item.img}})"></view>
+      <view class="active_list_content">
+        <view class="active_list_content_title">
+          <text>{{item.title}}</text>
+        </view>
+        <view class="active_list_content_time">
+          <view class="active_list_content_time_icon" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_time.png')"></view>
+          <text>{{item.stopTime}}</text>
+        </view>
+        <view class="active_list_content_address">
+          <view class="active_list_content_address_icon" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_address.png')"></view>
+          <text>{{item.address}}</text>
+        </view>
+        <view class="active_list_content_other">
+          <view class="active_list_content_other_left">
+            <text>{{item.cost == 0 ? '免费':'¥'+item.cost}}</text>
+            <text>已有{{item.signUpNum}}人报名</text>
+          </view>
+          <view class="active_list_content_other_right" catchtap="hrefActivitySignUp">
+            <text>我要报名</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 校友企业 -->
+  <view class="small-title">
+    <text class="title-row">——</text>
+    <view class="title-icon" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_%E6%A0%A1%E5%8F%8B%E4%BC%81%E4%B8%9Az.png')"></view>
+    <text class="title-text">校友企业</text>
+    <text class="title-row">——</text>
+    <view class="title-text title-more" bindtap="hrefBusiness">
+      <text>更多</text>
+      <view class="title-more-right" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_right2.png')"></view>
+    </view>
+  </view>
+  <view class="business">
+    <view class="business_card" wx:for="{{businessArr}}" wx:key="key" bindtap="hrefBusinessDetailMajor">
+      <view class="business_card_img" style="background-image: url({{item.img}})"></view>
+      <view class="business_card_text">
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 留白 -->
+  <view class="small-title blank">
+    <text class="title-row blank-row">——</text>
+    <text class="title-text blank-text">到底啦</text>
+    <text class="title-row">——</text>
+  </view>
+</view>
+
+<!-- 遮罩 -->
+<view class="bg_layer"></view>

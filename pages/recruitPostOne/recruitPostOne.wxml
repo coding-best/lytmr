@@ -1,0 +1,61 @@
+<!-- 发布招聘 -->
+<view class="container">
+  <!-- 基本信息 -->
+  <view class="content">
+    <view class="content_list">
+      <text>职位名称<text class="star">*</text></text>
+      <input type="text" placeholder="如：项目管理员" placeholder-class="placeholder" value="{{title}}" bindinput="titleInput"/>
+    </view>
+    <view class="content_list">
+      <text>工作性质<text class="star">*</text></text>
+      <picker mode="selector" bindchange="bindPickerNature" value="{{nature}}" range="{{natureArray}}">
+        <view class="picker">
+          {{nature}}
+        </view>
+      </picker>
+      <view class="right" wx:if="{{!nature}}"></view>
+    </view>
+    <view class="content_list">
+      <text>岗位薪资<text class="star">*</text></text>
+      <input type="text" placeholder="如：面议、5000-7000/月或50-100/天" placeholder-class="placeholder" value="{{salary}}" bindinput="salaryInput" />
+    </view>
+    <view class="content_list">
+      <text>招聘人数<text class="star">*</text></text>
+      <input type="text" placeholder="请填写1-999之间的数字" placeholder-class="placeholder" style="right: 10rpx;" value="{{number}}" bindinput="numberInput" />
+      <text>人</text>
+    </view>
+    <view class="content_list">
+      <text>工作年限<text class="star">*</text></text>
+      <picker mode="selector" bindchange="bindPickerWorkingDate" value="{{workingDate}}" range="{{workingDateArray}}">
+        <view class="picker">
+          {{workingDate}}
+        </view>
+      </picker>
+      <view class="right" wx:if="{{!workingDate}}"></view>
+    </view>
+    <view class="content_list">
+      <text>学历要求<text class="star">*</text></text>
+      <picker mode="selector" bindchange="bindPickerEducation" value="{{education}}" range="{{educationArray}}">
+        <view class="picker">
+          {{education}}
+        </view>
+      </picker>
+      <view class="right" wx:if="{{!education}}"></view>
+    </view>
+    <view class="content_list">
+      <text>工作地点<text class="star">*</text></text>
+      <input type="text" placeholder="请填写详细地址" placeholder-class="placeholder" value="{{location}}" bindinput="locationInput" />
+    </view>
+    <view class="content_list content_list_intro">
+      <text>职位描述<text class="star">*</text></text>
+      <textarea placeholder="请在此填写职位详情..." placeholder-class="placeholder" value="{{describle}}" bindinput="textarea"></textarea>
+      <view class="word">
+        <text style="color: rgb(60, 152, 231)">{{describleNum}}</text>
+        <text>/</text>
+        <text>140</text>
+      </view>
+    </view>
+  </view>
+  <view class="next" bindtap="hrefRecruitPostTwo" wx:if="{{!recruitChange}}">下一步</view>
+  <view class="next" bindtap="hrefMineRecruitChange" wx:if="{{recruitChange}}">保存修改</view>
+</view>

@@ -1,0 +1,41 @@
+<!-- 企业详情 -->
+<view class="container">
+  <view class="title">
+    <view class="title_img"></view>
+    <view class="title_info">
+      <view class="title_info_name">
+        <text>深圳市深大巨成结构工程技术有限公司</text>
+      </view>
+      <view class="title_info_info">
+        <view class="recruit-list-require">
+          <view class="recruit-list-require-logo" style="background-image: url({{requires[0].img}})"></view>
+          <text>民营企业</text>
+          <view class="recruit-list-require-logo" style="background-image: url({{requires[1].img}})"></view>
+          <text>100-149人</text>
+        </view>
+        <view class="recruit-list-require">
+          <view class="recruit-list-require-logo" style="background-image: url({{requires[2].img}})"></view>
+          <text>建筑／建材</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="recruit-list-business" bindtap="getLocation">
+    <view class="recruit-list-require-logo" style="background-image: url({{requires[3].img}})"></view>
+    <view class="recruit-list-business-title">
+      <text>广东省深圳市福田区莲花街道侨福大厦11A</text>
+    </view>
+    <view class="right"></view>
+  </view>
+
+
+  <!-- 企业介绍 -->
+  <view class="describe">
+    <view class="recruit_title">
+      <text>企业介绍</text>
+    </view>
+    <view class="list_content">
+      <text>深圳市深大巨成结构工程技术有限公司办公室地址位于中国个经济特区，鹏城深圳，深圳 深圳市龙岗区龙城街道万科天誉中央广场A座一单元603，于2015年07月14日在深圳市市场监督管理局注册成立，注册资本为200万元人民币，在公司发展壮大的3年里，我们始终为客户提供好的产品和技术支持、健全的售后服务，我公司主要经营新型建筑材料的技术开发、技术咨询;土木工程检测技术服务；房地产信息咨询；国内贸易；经营进出口业务。（以上法律、行政法规、国务院决定规定在登记前须经批准的项目除外，限制的项目须取得许可后方可经营）；我们有好的产品和专业的销售和技术团队。</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,36 @@
+<!-- 基金总会介绍 -->
+<view class="container">
+  <view class="header">
+    <text>深圳市深大土木教育基金会</text>
+  </view>
+  <view class="content">
+    <view class="content_title">
+      <view class="content_title_icon1"></view>
+      <text>深大土木教育基金会的成立</text>
+      <view class="content_title_shadow"></view>
+    </view>
+    <view class="content_list">
+      <text>在深圳大学30周年校庆暨土木工程校友会第三届理事会换届大会的会场上，就如何感恩母校、回馈学院，三位土木杰出老学长——邓学勤校友、李奕标校友、林学春校友一拍即合达成共识，一致赞同发起成立深大土木教育基金会，随即得到张伟文学长和潘海飞校友的响应，于是便开始着手成立基金会事宜。土木校友希望设立此基金会后可以让更多的人参与到教育、研究到有关项目中来，同时奖教助学，让土木工程校友最大程度的回馈社会。到目前为止85级正中集团邓学勤董事长、89级永鑫集团林学春董事长、90级海岸集团李奕标董事长分别捐赠500万元，90级南利装饰董事长张伟文捐赠200万元，96级集德创建董事长潘海飞捐赠100万元作为原始注册基金，共计1800万元。</text>
+    </view>
+  </view>
+  <view class="content content_last">
+    <view class="content_title">
+      <view class="content_title_icon2"></view>
+      <text>深大土木教育基金会的作用</text>
+      <view class="content_title_shadow"></view>
+    </view>
+    <view class="content_list">
+      <text>该基金会将以“团结深大土木校友，多渠道筹集资金，资助深圳大学土木工程学院相关教育事业，提高教育质量和学术水平”为宗旨，在以下业务范围内开展公益活动：\n</text>
+      <text> 1. 支持土木相关的教学与研究设施的改善（包括建筑物、仪器设备和图书资料等）；\n</text>
+      <text> 2. 奖励在土木行业做出突出贡献的个人和品学兼优的学生；\n</text>
+      <text> 3. 资助贫困学生，以及支持与教育事业有关的其它事项；\n</text>
+      <text> 4. 按照捐赠者意愿设立的资助项目。\n</text>
+    </view>
+  </view>
+  <image class="newsDetail_content_img" src="https://ofdznzfo9.qnssl.com/szdx_45541527751062_.pic_hd.jpg" mode="widthFix"></image>
+  <image class="newsDetail_content_img" src="https://ofdznzfo9.qnssl.com/szdx_45531527751061_.pic_hd.jpg" mode="widthFix"></image>
+
+  <view style="margin-bottom: 40rpx;"></view>
+</view>
+
+<view style="height: 20rpx;"></view>

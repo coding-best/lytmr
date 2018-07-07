@@ -1,0 +1,185 @@
+<!-- 捐赠详情页 -->
+<view class="container">
+  <!-- 顶部 -->
+  <view class="header {{desc? 'shadow':''}}">
+    <view class="header_img"></view>
+    <view class="header_title">深圳市深大巨成结构工程技术有限公司</view>
+    <view class="header_value">
+      <view class="header_submenu">
+        <view class="money_icon_money"></view>
+        <view class="collecting">
+          <view class="collecting_submenu">
+            <text>当前筹款</text>
+          </view>
+          <view class="collecting_num">
+            <text>8956</text>
+            <text>元</text>
+          </view>
+        </view>
+      </view>
+      <view class="column"></view>
+      <view class="header_submenu">
+        <view class="money_icon_hand"></view>
+        <view class="collecting">
+          <view class="collecting_submenu">
+            <text>捐款人次</text>
+          </view>
+          <view class="collecting_num">
+            <text>25</text>
+            <text>人</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 内容 -->
+  <view class="content {{desc? 'shadow':''}}">
+    <view class="content_title">
+      <view class="content_icon"></view>
+      <text>需求详情</text>
+    </view>
+    <!-- 需求内容 -->
+    <view class="content_desc">
+      <text>为激励土木新生奋发图强、开拓进取，同时弘扬广大校友们勤奋刻苦、勇于追逐梦想和永不言弃的精神，基金会设立筑梦新生奖，奖励入学成绩排名前列的本科生和研究生。\n</text>
+      <text>为激励土木新生奋发图强、开拓进取，同时弘扬广大校友们勤奋刻苦、勇于追逐梦想和永不言弃的精神，基金会设立筑梦新生奖，奖励入学成绩排名前列的本科生和研究生。</text>
+    </view>
+    <image class="content_img" src="https://ofdznzfo9.qnssl.com/szdx_44111527649006_.pic_hd.jpg" mode="widthFix" style="margin-top: 32rpx;"></image>
+    <image class="content_img" src="https://ofdznzfo9.qnssl.com/szdx_19781526554104_.pic_hd.jpg" mode="widthFix"></image>
+  </view>
+  <!-- 索取捐赠 -->
+  <view class="content {{desc? 'shadow':''}}">
+    <view class="content_title">
+      <view class="content_icon"></view>
+      <text>索取捐赠收据说明</text>
+    </view>
+    <!-- 需求内容 -->
+    <view class="content_desc">
+      <text>1、深圳市深大土木教育基金会可为支持本项目的爱心人士开具国家统一的“公益事业捐赠专用收据”，公益性捐赠收据可抵扣企业所得税或个人所得税。\n</text>
+      <text>\n2、捐赠票据索要方式：基于人工、邮寄成本等因素考虑，我们将会为捐赠满100元（含100元）以上、有收据需求的捐赠方开具并邮寄纸质票据；100元以下的捐赠，如有需要，可开具收据并发送照片至登记邮箱。可在上班时间（周一至周五9:00—17:30）致电基金会办公室：0755-26916945告知收件地址或邮箱。</text>
+    </view>
+    <view style="margin-top: 20rpx;">
+      <view class="content_desc_title">
+        <view class="content_desc_icon" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_51001528078437_.pic_hd.jpg');"></view>
+        <text>上班时间：周一至周五9:00-17:30</text>
+      </view>
+      <view class="content_desc_title">
+        <view class="content_desc_icon" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_51011528078438_.pic_hd.jpg');"></view>
+        <text>办公电话：0755-26916945</text>
+      </view>
+    </view>
+  </view>
+  <!-- 爱心流水 -->
+  <view class="content {{desc? 'shadow':''}}  ">
+    <view class="content_title">
+      <view class="content_icon"></view>
+      <text>爱心流水</text>
+    </view>
+    <view class="{{more? 'content_unfold':'content_fold'}}">
+      <view class="content_people" bindtap="hrefInfo" wx:for="{{danatePeopleArr}}" wx:key="index">
+        <view class="content_info">
+          <view class="content_info_img" style="background-image: url({{item.img}})"></view>
+          <view class="content_info_name">{{item.name}}</view>
+        </view>
+        <view class="content_right">
+          <text>捐赠<text style="color: rgb(60,152,231)">{{item.value}}</text>元</text>
+        </view>
+      </view>
+    </view>
+    <view class="more" bindtap="openExtend" wx:if="{{!more}}">
+      <text>展开更多</text>
+      <view class="more_bottom"></view>
+    </view>
+    <view class="more" bindtap="closeExtend" wx:if="{{more}}">
+      <view class="more_bottom_reserve"></view>
+      <text>收起</text>
+    </view>
+  </view>
+
+  <!-- 底部我要捐款 -->
+  <view class="bottom {{desc? 'shadow':''}}">
+    <view class="share">
+      <view class="share_icon"></view>
+      <text>分享</text>
+    </view>
+    <view class="share_button" bindtap="onPayTo">
+      <text>我要捐款</text>
+    </view>
+  </view>
+
+  <!-- 底部撑起 -->
+  <view class="blank_bottom"></view>
+
+  <!-- 遮罩 -->
+  <view class="my-layer" wx:if="{{payTo}}" bindtap="onPayTo" catchtouchmove='true'></view>
+
+  <!-- 捐款页 -->
+  <view animation="{{animationData}}" class="my-payTo {{desc? 'shadow':''}}" catchtouchmove='true'>
+    <view class="close" bindtap="onPayTo"></view>
+    <view class="amount">
+      <view class="amount_list {{pick==10? 'pick':''}}" data-pickvalue="10" bindtap="selectValue">
+        <text>10元</text>
+      </view>
+      <view class="amount_list {{pick==20? 'pick':''}}" data-pickvalue="20" bindtap="selectValue">
+        <text>20元</text>
+      </view>
+      <view class="amount_list {{pick==50? 'pick':''}}" data-pickvalue="50" bindtap="selectValue">
+        <text>50元</text>
+      </view>
+      <view class="amount_list {{pick==100? 'pick':''}}" data-pickvalue="100" bindtap="selectValue">
+        <text>100元</text>
+      </view>
+    </view>
+    <view class="amount2">
+      <view class="amount_list amount_list_custom {{pick=='random'? 'pick':''}}" data-pickvalue="random" bindtap="selectValue">
+        <text>自定义金额</text>
+      </view>
+      <view class="amount_list amount_list_anonymous">
+        <checkbox></checkbox>
+        <text>匿名捐赠</text>
+      </view>
+    </view>
+    <view class="amount3">
+      <view class="amount_list amount_list_button" bindtap="Pay">
+        <text>立即捐款</text>
+      </view>
+    </view>
+    <view class="alert" bindtap="clickOpenDesc">
+      <view class="alert_icon"></view>
+      <text>点击此处查看索取捐赠收据说明</text>
+    </view>
+  </view>
+
+  <view style="height: 100rpx;"></view>
+
+
+  <!-- 描述 -->
+  <view class="desc" wx:if="{{desc}}" catchtouchmove='true'>
+    <view class="close" bindtap="clickCloseDesc"></view>
+    <view class="content">
+      <view class="content_title">
+        <text class="title-row"></text>
+        <view class="content_icon"></view>
+        <text>索取捐赠收据说明</text>
+        <text class="title-row"></text>
+      </view>
+      <!-- 需求内容 -->
+      <view class="content_desc">
+        <text>1.深圳市深大土木教育基金会可为支持本项目的爱心人士开具国家统一的“公益事业捐赠专用收据”，公益性捐赠收据可抵扣企业所得税或个人所得税。\n</text>
+        <text>2.捐赠票据索要方式：基于人工、邮寄成本等因素考虑，我们将会为捐赠满100元（含100元）以上、有收据需求的捐赠方开具并邮寄纸质票据；100元以下的捐赠，如有需要，可开具收据并发送照片至登记邮箱。可在上班时间致电基金会办公室告知收件地址或邮箱。</text>
+      </view>
+      <view style="margin-top: 40rpx;">
+        <view class="content_desc_title">
+          <view class="content_desc_icon" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_51001528078437_.pic_hd.jpg');"></view>
+          <text>上班时间：周一至周五9:00-17:30</text>
+        </view>
+        <view class="content_desc_title">
+          <view class="content_desc_icon" style="background-image: url('https://ofdznzfo9.qnssl.com/szdx_51011528078438_.pic_hd.jpg');"></view>
+          <text>办公电话：0755-26916945</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 遮罩 -->
+  <view class="desc-layer" wx:if="{{desc}}" bindtap="clickCloseDesc" catchtouchmove='true'></view>
+</view>

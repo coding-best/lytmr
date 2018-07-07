@@ -1,0 +1,74 @@
+<!-- 聊天页 -->
+<view class="container">
+  <scroll-view scroll-y='true' scroll-top="{{scrollTop}}" scroll-with-animation="true" class="content">
+    <view class="time">2018-02-16 13:08</view>
+    <!-- 加了chat_reverse和reverse是对方发给我的信息 -->
+    <view class="chat chat_reverse">
+      <view class="head"></view>
+      <view class="send reverse">
+        <text>周末有空吗</text>
+        <view class="arrow"></view>
+      </view>
+    </view>
+    <!-- 没有chat_reverse和reverse是我发给对方信息 -->
+    <view class="chat">
+      <view class="send">
+        <text>有的，周末你想去哪儿吗有的，周末你想去哪儿吗</text>
+        <view class="arrow"></view>
+      </view>
+      <view class="head"></view>
+    </view>
+    <view class="chat chat_reverse">
+      <view class="head"></view>
+      <view class="send reverse">
+        <text>周末我们踏青去，有几个朋友前天说也要去，周末可以约好时间结伴同行。</text>
+        <view class="arrow"></view>
+      </view>
+    </view>
+    <view class="chat chat_reverse">
+      <view class="head"></view>
+      <view class="send reverse">
+        <text>这几个朋友都是你见过的~</text>
+        <view class="arrow"></view>
+      </view>
+    </view>
+    <view class="chat">
+      <view class="send">
+        <text>好的，周末见</text>
+        <view class="arrow"></view>
+      </view>
+      <view class="head"></view>
+    </view>
+    <view class="time">2018-02-17 09:08</view>
+    <view class="chat chat_reverse">
+      <view class="head"></view>
+      <view class="send reverse">
+        <text>来了没有，就等你了~</text>
+        <view class="arrow"></view>
+      </view>
+    </view>
+
+    <!-- 这里模拟聊天数据 -->
+    <view class="chat {{item.receive?'':'chat_reverse'}}" wx:for="{{chatData}}" wx:key="index">
+      <!-- 如果对方发送消息，头像在左边 -->
+      <view class="head" wx:if="{{!item.receive}}"></view>
+      <view class="send {{item.receive?'':'reverse'}}">
+        <text>{{item.content}}</text>
+        <view class="arrow"></view>
+      </view>
+      <!-- 如果我发送消息，头像在右边 -->
+      <view class="head" wx:if="{{item.receive}}"></view>
+    </view>
+    <!-- 底部的距离 -->
+    <!-- <view style="width: 100%;height: 120rpx;float:left;"></view> -->
+  </scroll-view>
+
+  <!-- 信息发送框 -->
+  <view class="message">
+    <input value="{{mySend}}" placeholder="想说点什么..." placeholder-class="placeholder" confirm-type="send" bindconfirm="bindSend"
+      maxlength="-1" confirm-hold="true"/>
+  </view>
+</view>
+
+<!-- 遮罩 -->
+<view class="bg_layer"></view>

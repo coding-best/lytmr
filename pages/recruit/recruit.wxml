@@ -1,0 +1,140 @@
+<!-- 企业招聘 -->
+<view class="container">
+  <!-- 顶部选项卡 -->
+  <view class="navbar">
+    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+  </view>
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange">
+    <!--  全部  -->
+    <swiper-item class="currentTab">
+      <view class="recruit">
+        <view class="recruit-list" wx:for="{{recruitArr}}" wx:key="key" catchtap="hrefRecruitDetail">
+          <view class="recruit-star"></view>
+          <view class="recruit-list-title">
+            <text>{{item.title}}</text>
+            <text wx:if="{{item.salary == '面议'}}">面议</text>
+            <text wx:elif="{{item.salary != '面议'}}"><text style="font-size: 20rpx;color: rgb(60, 152, 231);">¥</text>{{item.salary}}</text>
+          </view>
+          <view class="recruit-list-require">
+            <view class="recruit-list-require-logo" style="background-image: url({{requires[0].img}})"></view>
+            <text>{{item.workLife}}</text>
+            <view class="recruit-list-require-logo" style="background-image: url({{requires[1].img}})"></view>
+            <text>{{item.degree}}</text>
+            <view class="recruit-list-require-logo" style="background-image: url({{requires[2].img}})"></view>
+            <text>{{item.job}}</text>
+            <text>{{item.time}}</text>
+          </view>
+          <view class="recruit-list-business">
+            <view class="recruit-list-business-logo" style="background-image: url({{item.logoImg}})"></view>
+            <view class="recruit-list-business-title">
+              <text class="recruit-list-business-name">{{item.business}}</text>
+              <text class="recruit-list-business-address">{{item.address}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="blank_bottom"></view>
+    </swiper-item>
+
+    <!-- 全职 -->
+    <swiper-item class="currentTab">
+      <view class="recruit">
+        <view class="recruit-list" wx:for="{{recruitArr}}" wx:key="key" wx:if="{{item.job=='全职'}}">
+          <view class="recruit-star"></view>
+          <view class="recruit-list-title">
+            <text>{{item.title}}</text>
+            <text wx:if="{{item.salary == '面议'}}">面议</text>
+            <text wx:elif="{{item.salary != '面议'}}">
+                            <text style="font-size: 20rpx;color: rgb(60, 152, 231);">¥</text>{{item.salary}}</text>
+          </view>
+          <view class="recruit-list-require">
+            <view class="recruit-list-require-logo" style="background-image: url({{requires[0].img}})"></view>
+            <text>{{item.workLife}}</text>
+            <view class="recruit-list-require-logo" style="background-image: url({{requires[1].img}})"></view>
+            <text>{{item.degree}}</text>
+            <view class="recruit-list-require-logo" style="background-image: url({{requires[2].img}})"></view>
+            <text>{{item.job}}</text>
+            <text>{{item.time}}</text>
+          </view>
+          <view class="recruit-list-business">
+            <view class="recruit-list-business-logo" style="background-image: url({{item.logoImg}})"></view>
+            <view class="recruit-list-business-title">
+              <text class="recruit-list-business-name">{{item.business}}</text>
+              <text class="recruit-list-business-address">{{item.address}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="blank_bottom"></view>
+    </swiper-item>
+
+    <!-- 兼职 -->
+    <swiper-item class="currentTab">
+      <view class="recruit">
+        <view class="recruit-list" wx:for="{{recruitArr}}" wx:key="key" wx:if="{{item.job=='兼职'}}">
+          <view class="recruit-star"></view>
+          <view class="recruit-list-title">
+            <text>{{item.title}}</text>
+            <text wx:if="{{item.salary == '面议'}}">面议</text>
+            <text wx:elif="{{item.salary != '面议'}}">
+                            <text style="font-size: 20rpx;color: rgb(60, 152, 231);">¥</text>{{item.salary}}</text>
+          </view>
+          <view class="recruit-list-require">
+            <view class="recruit-list-require-logo" style="background-image: url({{requires[0].img}})"></view>
+            <text>{{item.workLife}}</text>
+            <view class="recruit-list-require-logo" style="background-image: url({{requires[1].img}})"></view>
+            <text>{{item.degree}}</text>
+            <view class="recruit-list-require-logo" style="background-image: url({{requires[2].img}})"></view>
+            <text>{{item.job}}</text>
+            <text>{{item.time}}</text>
+          </view>
+          <view class="recruit-list-business">
+            <view class="recruit-list-business-logo" style="background-image: url({{item.logoImg}})"></view>
+            <view class="recruit-list-business-title">
+              <text class="recruit-list-business-name">{{item.business}}</text>
+              <text class="recruit-list-business-address">{{item.address}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="blank_bottom"></view>
+    </swiper-item>
+
+    <!-- 实习 -->
+    <swiper-item class="currentTab">
+      <view class="recruit">
+        <view class="recruit-list" wx:for="{{recruitArr}}" wx:key="key" wx:if="{{item.job=='实习'}}">
+          <view class="recruit-star"></view>
+          <view class="recruit-list-title">
+            <text>{{item.title}}</text>
+            <text wx:if="{{item.salary == '面议'}}">面议</text>
+            <text wx:elif="{{item.salary != '面议'}}">
+                            <text style="font-size: 20rpx;color: rgb(60, 152, 231);">¥</text>{{item.salary}}</text>
+          </view>
+          <view class="recruit-list-require">
+            <view class="recruit-list-require-logo" style="background-image: url({{requires[0].img}})"></view>
+            <text>{{item.workLife}}</text>
+            <view class="recruit-list-require-logo" style="background-image: url({{requires[1].img}})"></view>
+            <text>{{item.degree}}</text>
+            <view class="recruit-list-require-logo" style="background-image: url({{requires[2].img}})"></view>
+            <text>{{item.job}}</text>
+            <text>{{item.time}}</text>
+          </view>
+          <view class="recruit-list-business">
+            <view class="recruit-list-business-logo" style="background-image: url({{item.logoImg}})"></view>
+            <view class="recruit-list-business-title">
+              <text class="recruit-list-business-name">{{item.business}}</text>
+              <text class="recruit-list-business-address">{{item.address}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="blank_bottom"></view>
+    </swiper-item>
+  </swiper>
+  <!-- 发布招聘icon -->
+  <view class="recruit_icon" bindtap="hrefRecruitPostOne"></view>
+</view>
+
+<!-- 遮罩 -->
+<view class="bg_layer"></view>

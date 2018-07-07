@@ -1,0 +1,59 @@
+<!-- 校友企业 -->
+<view class="container">
+  <view class="top">
+    <view class="btn" bindtap="powerDrawer" data-statu="open" data-statuf="close">{{industry}}</view>
+    <view class="icon"></view>
+    <view class="search">
+      <view class="search_arr" bindtap="hrefSelect">
+        <view class="search_icon"></view>
+        <input class="bc_text" placeholder="搜索公司名称关键词" placeholder-style="color: rgb(180, 180, 180)" value="{{searchValue}}" bindinput="searchInput"/>
+        <view class="clear" wx:if="{{searchValue}}" bindtap="clearSearch"></view>
+      </view>
+    </view>
+  </view>
+  <view class="blank"></view>
+  <scroll-view>
+    <view class="list" wx:for="{{businessArr}}" wx:key="index" bindtap="hrefBusinessDetailMajor">
+      <view class="title">
+        <view class="title_img" style="background-image: url({{item.img}});"></view>
+        <view class="title_info">
+          <view class="title_info_name">
+            <text wx:for="{{businessArrName[index]}}"wx:key="key" class="{{item == keyName ? 'light' : '' }}">{{item}}</text>
+          </view>
+          <view class="title_info_info">
+            <view class="recruit-list-require">
+              <view class="recruit-list-require-logo" style="background-image: url({{requires[0].img}})"></view>
+              <text>民营企业</text>
+              <view class="recruit-list-require-logo" style="background-image: url({{requires[1].img}})"></view>
+              <text>100-149人</text>
+            </view>
+            <view class="recruit-list-require">
+              <view class="recruit-list-require-logo" style="background-image: url({{requires[2].img}})"></view>
+              <text>建筑／建材</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 位置 -->
+      <view class="recruit-list-business" catchtap="getLocation">
+        <view class="recruit-list-require-logo" style="background-image: url({{requires[3].img}})"></view>
+        <view class="recruit-list-business-title">
+          <text>{{item.address}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <!--mask-->
+  <view class="drawer_screen" bindtap="powerDrawer" data-statuf="close" wx:if="{{showModalStatus}}" catchtouchmove='true'></view>
+  <!--使用animation属性指定需要执行的动画-->
+  <view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+    <view class="drawer_content">
+      <view class="line" wx:for="{{sort}}" wx:key="index" bindtap="chooseSort" data-num="{{index}}" data-sort="{{item}}" data-statuf="close" style="color: {{index == num? '#3c98e7': 'rgb(68, 68, 68)'}}">{{item}}
+        <view class="gou" style="display: {{index == num? 'block': 'none'}};"></view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 遮罩 -->
+<view class="bg_layer"></view>
